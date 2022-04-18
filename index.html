@@ -13,7 +13,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-wihte">
+  <nav class="navbar navbar-expand-md navbar-light bg-wihte">
     <div class="container">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,12 +33,170 @@
           </li>
         </ul>
         <div class="auth ms-auto">
-          <button class="btn btn-outline-primary">login in</button>
-          <button class="btn btn-primary">register</button>
+          <button href="./login.html" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#login"
+            data-bs-whatever="@mdo">login</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
+            data-bs-whatever="@mdo">register</button>
         </div>
       </div>
     </div>
   </nav>
+
+
+  <div class="modal fade login_Modal" id="login" tabindex="-1" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">logo hear</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <h4 class="h4 mb-1 text-capitalize">Hello Welcome back</h4>
+          <p>Lorem ipsum consectetur adipisicing elit. Distinctio, nihil sit!</p>
+          <form action="">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <div class="mb-3 text-center">
+              <a href="/" class="text-capitalize">forget your password?</a>
+            </div>
+            <button class="btn btn-primary btn-lg w-100">sign in</button>
+            <p class="my-3 text-center">
+              dont i have account?<a href="/" class="text-capitalize"> create account</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade register_Modal" id="register_Modal" tabindex="-1" aria-hidden="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">logo hear</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-5" id="modal-choose">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="choose_type" id="doctor">
+                <img src="./img/Wear a Mask.png" alt="">
+                <p class="text p-2 bg-secondary text-white rounded text-center">i am doctor</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="choose_type" id="patient">
+                <img src="./img/Hello.png" alt="">
+                <p class="text p-2 bg-secondary text-white rounded text-center">i am patient</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body d-none" id="modal-doctor">
+          <div class="back">
+            <h5><i class="fa-solid fa-angle-left"></i> back</h5>
+          </div>
+          <form action="">
+            <div class="upload_img mb-4">
+              <input type="file" name="file" id="file_upload">
+              <span class="bg-light text-center py-4">
+                <i class="fa-solid fa-camera fs-1 text-wite"></i>
+                <p>add photo</p>
+              </span>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pe-md-1 mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" placeholder="first name *">
+                  <label for="floatingInput">first name *</label>
+                </div>
+              </div>
+              <div class="col-md-6 ps-md-1 mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" placeholder="name@example.com">
+                  <label for="floatingInput">last name *</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name="specialty" list="specialty" placeholder="name@example.com">
+              <datalist id="specialty">
+                <option value="text">specialty</option>
+              </datalist>
+              <label for="floatingSelect">specialty *</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" placeholder="phone number">
+              <label for="floatingInput">phone number *</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" placeholder="name@example.com">
+              <label for="floatingInput">Email address *</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" placeholder="password">
+              <label for="floatingInput">password *</label>
+            </div>
+            <button class="btn btn-primary btn-lg w-100">sign in</button>
+            <p class="my-3 text-center">
+              dont i have account?<a href="/" class="text-capitalize"> create account</a>
+            </p>
+          </form>
+        </div>
+        <div class="modal-body d-none" id="modal-patient">
+          <div class="back">
+            <h5><i class="fa-solid fa-angle-left"></i> back</h5>
+          </div>
+          <form action="">
+            <div class="upload_img mb-4">
+              <input type="file" name="file" id="file_upload">
+              <span class="bg-light text-center py-4">
+                <i class="fa-solid fa-camera fs-1 text-wite"></i>
+                <p>add photo</p>
+              </span>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pe-md-1 mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" placeholder="first name *">
+                  <label for="floatingInput">first name *</label>
+                </div>
+              </div>
+              <div class="col-md-6 ps-md-1 mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" placeholder="name@example.com">
+                  <label for="floatingInput">last name *</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" placeholder="phone number">
+              <label for="floatingInput">phone number *</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" placeholder="name@example.com">
+              <label for="floatingInput">Email address *</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" placeholder="password">
+              <label for="floatingInput">password *</label>
+            </div>
+            <button class="btn btn-primary btn-lg w-100">sign in</button>
+            <p class="my-3 text-center">
+              dont i have account?<a href="/" class="text-capitalize"> create account</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <header class="home_header d-flex align-items-center">
     <div class="container">
@@ -47,17 +205,19 @@
           <h1 class="h1">The Most Valuable Thing is Your Health</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur consequuntur asperiores quam maiores
             in ab atque quasi molestias quos unde?</p>
-          <a href="/" class="btn btn-primary btn-lg">register now</a>
+          <a  href="./registerDoctor.html" class="btn btn-primary">register</a>
+          <a  href="./login.html" class="btn btn-primary">login</a>
         </div>
       </div>
     </div>
   </header>
 
-  <section class="services py-5 mt-5">
+
+  <section class="sercives_patient py-5 mt-5">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-          <span class="text-primary fs-5">Our Services</span>
+          <span class="text-primary fs-5">Services to the patient</span>
           <h2 class="fs-1 text-capitalize">caring for the patient's health is our priority</h2>
         </div>
       </div>
@@ -144,6 +304,7 @@
     </div>
   </section>
 
+
   <section class="sercives_patient py-5">
     <div class="container">
       <div class="row">
@@ -172,71 +333,6 @@
       </div>
     </div>
   </section>
-
-  <section class="numbers bg-light py-5">
-    <div class="container">
-      <div class="row mt-3">
-        <div class="col-6 col-md-4 col-lg-3 text-center mt-3">
-          <div class="icon text-primary display-4">
-            <i class="fa-solid fa-tooth"></i>
-          </div>
-          <h3 class="h3 mb-0">5</h3>
-          <p class="text-capitalize">years of experience</p>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center mt-3">
-          <div class="icon text-primary display-4">
-            <i class="fa-solid fa-heart-pulse"></i>
-          </div>
-          <h3 class="h3 mb-0">1500</h3>
-          <p class="text-capitalize">Happy Patients</p>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center mt-3">
-          <div class="icon text-primary display-4">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-          </div>
-          <h3 class="h3 mb-0">235.000</h3>
-          <p class="text-capitalize">years of experience</p>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center mt-3">
-          <div class="icon text-primary display-4">
-            <i class="fa-solid fa-tooth"></i>
-          </div>
-          <h3 class="h3 mb-0">235.000</h3>
-          <p class="text-capitalize">years of experience</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sercives_doctor py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 img">
-          <img src="./img/doctor.png" class="img-cover" alt="">
-        </div>
-        <div class="col-md-6 p-3">
-          <p class="fs-4 my-1">video call</p>
-          <h2 class="h3">Best Care For Your Good Health</h2>
-          <p class="text-2 fw-light">Esteem spirit temper too say adieus who direct esteem. It esteems luckily or
-            picture placing drawing. Apartments frequently or motionless on reasonable projecting expression.</p>
-          <button class="btn btn-primary">register now</button>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-6 p-3 order-1 order-md-0">
-          <p class="fs-4 my-1">video call</p>
-          <h2 class="h3">Best Care For Your Good Health</h2>
-          <p class="text-2 fw-light">Esteem spirit temper too say adieus who direct esteem. It esteems luckily or
-            picture placing drawing. Apartments frequently or motionless on reasonable projecting expression.</p>
-          <button class="btn btn-primary">register now</button>
-        </div>
-        <div class="col-md-6 img">
-          <img src="./img/doctor.png" class="img-cover" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <section class="doctors py-5 my-5">
     <div class="container">
@@ -342,6 +438,81 @@
     </div>
   </section>
 
+  <section class="numbers bg-light py-5">
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-6 col-sm-6 col-md-3 text-center mt-3">
+          <div class="icon text-primary display-4">
+            <i class="fa-solid fa-tooth"></i>
+          </div>
+          <h3 class="h3 mb-0">5</h3>
+          <p class="text-capitalize">years of experience</p>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 text-center mt-3">
+          <div class="icon text-primary display-4">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="h3 mb-0">1500</h3>
+          <p class="text-capitalize">Happy Patients</p>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 text-center mt-3">
+          <div class="icon text-primary display-4">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="h3 mb-0">235.000</h3>
+          <p class="text-capitalize">years of experience</p>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 text-center mt-3">
+          <div class="icon text-primary display-4">
+            <i class="fa-solid fa-tooth"></i>
+          </div>
+          <h3 class="h3 mb-0">235.000</h3>
+          <p class="text-capitalize">years of experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sercives_doctor py-5 mt-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <span class="text-primary fs-5">Services to the doctors</span>
+          <h2 class="fs-1 text-capitalize">We make your work easier and more accurate</h2>
+        </div>
+      </div>
+      <div class="row mt-5 pt-3">
+        <div class="col-md-6 img">
+          <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_hcnzk4ex.json" background="transparent"
+            speed="1" style="width: 90%; height: 100%;" loop autoplay></lottie-player>
+        </div>
+        <div class="col-md-6 p-3">
+          <p class="fs-5 text-capitalize my-1">video call</p>
+          <h2 class="h3">Best Care For Your Good Health</h2>
+          <p class="text-2 fw-light">Esteem spirit temper too say adieus who direct esteem. It esteems luckily or
+            picture placing drawing. Apartments frequently or motionless on reasonable projecting expression.</p>
+          <button class="btn btn-primary">register now</button>
+        </div>
+      </div>
+      <div class="row mt-5 pt-4">
+        <div class="col-md-6 p-3 order-1 order-md-0">
+          <p class="fs-5 text-capitalize my-1">add clinic</p>
+          <h2 class="h3">Best Care For Your Good Health</h2>
+          <p class="text-2 fw-light">Esteem spirit temper too say adieus who direct esteem. It esteems luckily or
+            picture placing drawing. Apartments frequently or motionless on reasonable projecting expression.</p>
+          <button class="btn btn-primary">register now</button>
+        </div>
+        <div class="col-md-6 img">
+          <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_uhrsndot.json" background="transparent"
+            speed="1" style="width: 90%; height: 100%;" loop autoplay></lottie-player>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#212529" fill-opacity="1"
       d="M0,288L120,256C240,224,480,160,720,149.3C960,139,1200,181,1320,202.7L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
@@ -355,7 +526,6 @@
           <h2 class="fs-1 text-white">Kinds Words From Customers</h2>
         </div>
       </div>
-
       <div class="swiper mySwiper py-5 ">
         <div class="swiper-wrapper">
           <div class="swiper-slide  ">
@@ -498,6 +668,8 @@
     </div>
   </footer>
 
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./js/all.min.js"></script>
   <script src="./js/popper.min.js"></script>

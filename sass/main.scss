@@ -7,10 +7,15 @@ $wihte: #ffffff;
 @import "../node_modules/bootstrap/scss/bootstrap";
 body {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 img {
   width: 100% !important;
   height: 100%;
+}
+input ,
+label{
+  text-transform: capitalize;
 }
 section {
   overflow: hidden;
@@ -140,7 +145,7 @@ h6 {
   background-size: cover;
 }
 
-.services .card {
+.sercives_patient .card {
   transition: all 0.4s ease;
   border-radius: 5px;
   &:hover {
@@ -175,4 +180,60 @@ h6 {
   width: 80px !important;
   height: 80px !important;
   border-radius: 50%;
+}
+.login {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  .socail li {
+    width: 50px;
+  }
+}
+
+.upload_img {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+  }
+  span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.register_Modal {
+  .choose_type {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #009dff;
+    margin: auto;
+    cursor: pointer;
+    .text {
+      position: absolute;
+      bottom: 10%;
+      left: 0px;
+      width: 100%;
+    }
+  }
+  .back {
+    cursor: pointer;
+  }
 }
