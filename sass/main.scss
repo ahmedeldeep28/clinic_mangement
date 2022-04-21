@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 
 $primary: #009dff;
-$light: #f1f1f1;
+$light: #edf1f1;
 $wihte: #ffffff;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -9,23 +9,26 @@ body {
   font-family: "Poppins", sans-serif;
   position: relative;
 }
-img {
-  width: 100% !important;
-  height: 100%;
-}
 input ,
 label{
   text-transform: capitalize;
 }
-section {
+section,
+.container,
+.row{
   overflow: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
 }
 .img-cover {
   width: 100%;
-  min-height: 400px;
+  min-height: 100%;
   object-fit: cover;
   object-position: center;
 }
+
 a {
   text-decoration: none !important;
 }
@@ -50,6 +53,9 @@ a {
 }
 .text-2 {
   font-size: 17px;
+}
+.pointer{
+  cursor: pointer;
 }
 h1,
 h2,
@@ -128,7 +134,7 @@ h6 {
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 .navbar .navbar-nav .nav-item {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
 }
@@ -137,7 +143,10 @@ h6 {
 .navbar .navbar-nav .nav-item .nav-link.active {
   color: $primary;
 }
-
+.logo {
+  width: 175px !important;
+  height: 33px;
+}
 .home_header {
   height: 85vh;
   width: 100%;
@@ -156,6 +165,7 @@ h6 {
 .sercives_doctor .img,
 .sercives_patient .img{
   max-height: 500px;
+  overflow: hidden;
 }
 .doctors .card-avatar img {
   width: 130px !important;
@@ -181,14 +191,10 @@ h6 {
   height: 80px !important;
   border-radius: 50%;
 }
-.login {
-  width: 100%;
-  min-height: calc(100vh - 75px);
-  display: flex;
-  align-items: center;
-  .socail li {
-    width: 50px;
-  }
+.avatar-sm {
+  width: 50px !important;
+  height: 50px !important; 
+  border-radius: 50%;
 }
 
 .upload_img {
@@ -236,4 +242,39 @@ h6 {
   .back {
     cursor: pointer;
   }
+};
+
+
+//style Home Patient
+
+.header_patient {
+  height: 75vh;
+}
+.features_patient {
+  padding-top: 140px ;
+  padding-bottom: 60px ;
+  @media (max-width:768px) {
+    padding-top: 180px ;
+  }
+  @media (max-width:576px) {
+    padding-top: 260px ;
+  }
+  .card a{
+    transition: all .4s linear;
+    display: inline-block;
+    &:hover {
+      transform: translateX(8px);
+    }
+  }
+}
+
+.app_phone .download_app{
+  border-radius: 40px 40px 0px 0px;
+}
+.nav-tabs .nav-link {
+  color: $dark;
+}
+.nav-tabs .nav-link.active {
+  color: $primary;
+  border-bottom: 2px solid $primary;
 }
