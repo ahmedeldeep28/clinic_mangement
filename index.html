@@ -36,16 +36,15 @@
           </li>
         </ul>
         <div class="auth ms-auto">
-          <button class="login_btn btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
-            data-bs-whatever="@mdo">login</button>
-          <button class="register_btn btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
-            data-bs-whatever="@mdo">register</button>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#login">login</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose">register</button>
         </div>
       </div>
     </div>
   </nav>
 
-  <div class="modal fade register_Modal" id="register_Modal" tabindex="-1" aria-hidden="false">
+
+  <div class="modal fade" id="choose" tabindex="-1" aria-hidden="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content overflow-hidden">
         <div class="modal-header">
@@ -54,18 +53,16 @@
           </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
-        <!-- choose type user -->
-        <div class="modal-body d-none p-5" id="modal-choose">
+        <div class="modal-body p-5">
           <div class="row">
             <div class="col-md-6 mb-4">
-              <div class="choose_type" id="doctor">
+              <div class="choose_type" data-bs-toggle="modal" data-bs-target="#register_doctor">
                 <img src="./img/Wear a Mask.png" class="w-100" alt="">
                 <p class="text p-2 bg-secondary text-white rounded text-center">i am doctor</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="choose_type" id="patient">
+              <div class="choose_type" data-bs-toggle="modal" data-bs-target="#register_patient">
                 <img src="./img/Hello.png" class="w-100" alt="">
                 <p class="text p-2 bg-secondary text-white rounded text-center">i am patient</p>
               </div>
@@ -73,11 +70,58 @@
           </div>
         </div>
 
-        <!-- register doctor -->
-        <div class="modal-body d-none" id="modal-doctor">
-          <div class="back">
-            <h5><i class="fa-solid fa-angle-left"></i> back</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="login" tabindex="-1" aria-hidden="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="./img/logo.png" alt="" class="logo">
           </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <h4 class="h4 mb-1 text-capitalize">Hello Welcome back</h4>
+          <p>Lorem ipsum consectetur adipisicing elit. Distinctio, nihil sit!</p>
+          <form action="" class="mt-5">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" placeholder="name@example.com">
+              <label>Email address *</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" placeholder="password">
+              <label>password *</label>
+            </div>
+            <div class="mb-3 text-center">
+              <a href="/" class="text-capitalize">forget your password?</a>
+            </div>
+            <button class="btn btn-primary btn-lg w-100">sign in</button>
+            <p class="my-3 text-center">
+              don`t have account?<a class="text-capitalize" data-bs-toggle="modal" href="#choose" role="button"> create
+                account</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="register_doctor" tabindex="-1" aria-hidden="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="./img/logo.png" alt="" class="logo">
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose">
+            <i class="fa-solid fa-angle-left"></i>back
+          </h5>
           <form action="">
             <div class="upload_img mb-4">
               <input type="file" name="image" id="file_upload">
@@ -150,16 +194,28 @@
             </div>
             <button class="btn btn-primary btn-lg w-100">sign in</button>
             <p class="my-3 text-center">
-              i have account <a class="login_btn text-capitalize pointer">login</a>
+              i have account <a class="text-capitalize" data-bs-toggle="modal" href="#login" role="button">login</a>
             </p>
           </form>
         </div>
 
-        <!-- register patient -->
-        <div class="modal-body d-none" id="modal-patient">
-          <div class="back">
-            <h5><i class="fa-solid fa-angle-left"></i> back</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="register_patient" tabindex="-1" aria-hidden="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="./img/logo.png" alt="" class="logo">
           </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose">
+            <i class="fa-solid fa-angle-left"></i>back
+          </h5>
           <form action="">
             <div class="upload_img mb-4">
               <input type="file" name="file" id="file_upload">
@@ -225,30 +281,7 @@
             </div>
             <button class="btn btn-primary btn-lg w-100">sign in</button>
             <p class="my-3 text-center">
-              i have account? <a class="login_btn text-capitalize pointer">login</a>
-            </p>
-          </form>
-        </div>
-
-        <!-- login -->
-        <div class="modal-body d-none p-4" id="modal-login">
-          <h4 class="h4 mb-1 text-capitalize">Hello Welcome back</h4>
-          <p>Lorem ipsum consectetur adipisicing elit. Distinctio, nihil sit!</p>
-          <form action="" class="mt-5">
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" placeholder="name@example.com">
-              <label>Email address *</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="password" class="form-control" placeholder="password">
-              <label>password *</label>
-            </div>
-            <div class="mb-3 text-center">
-              <a href="/" class="text-capitalize">forget your password?</a>
-            </div>
-            <button class="btn btn-primary btn-lg w-100">sign in</button>
-            <p class="my-3 text-center">
-              don`t have account?<a class="create_acounte text-capitalize pointer"> create account</a>
+              i have account <a class="text-capitalize" data-bs-toggle="modal" href="#login" role="button">login</a>
             </p>
           </form>
         </div>
@@ -265,7 +298,7 @@
           <h1 class="h1 text-capitalize">the most valuable thing is your health</h1>
           <p class="text-2 ">It is our honor to offer you a health service and doctors at the highest level of
             experience and efficiency</p>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose"
             data-bs-whatever="@mdo">register now</button>
         </div>
       </div>
@@ -346,7 +379,7 @@
         <div class="col-sm-6 col-lg-4 mt-2 wow animate__fadeInRight" data-wow-duration=".8s" data-wow-offset="200">
           <div class="card border-0 bg-transparent py-3 text-center">
             <div class="card-icon text-primary display-5">
-              <i class="fa-solid fa-book-atlas"></i>
+              <i class="fa-solid fa-file-invoice"></i>
             </div>
             <div class="card-body">
               <h4 class="card-title text-capitalize">medical history</h4>
@@ -371,8 +404,8 @@
           <h4 class="h4 text-capitalize">Choose between many clinics around you</h4>
           <p class="text-2 fw-light">We have all the specialities you will need and beside you, all you have to do is
             choose the specialisation and leave the rest to us</p>
-          <button class="register_patient btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
-            data-bs-whatever="@mdo">Make an aapointment</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_patient">Make an
+            aapointment</button>
         </div>
       </div>
       <div class="row mt-4">
@@ -382,8 +415,8 @@
           <h4 class="h4 text-capitalize">Communicate with your doctor from home</h4>
           <p class="text-2 fw-light">Our specialists will be glad to provide you with their expertise - book an
             appointment now with our doctors for diagnoses & treatment recommendation </p>
-          <button class="register_patient btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
-            data-bs-whatever="@mdo">Make an aapointment</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_patient">Make an
+            aapointment</button>
         </div>
         <div class="col-md-6 img wow animate__fadeInRight" data-wow-duration=".8s" data-wow-offset="200">
           <img src="./img/video-doctor.jpeg" alt="">
@@ -552,7 +585,7 @@
           <h4 class="h4 text-capitalize">Apply now in video call with your patient </h4>
           <p class="text-2 fw-light">If a patient needs a consultation or inquiry, now you can follow up on your patient
             through this service</p>
-          <button class="register_doctor btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_doctor"
             data-bs-whatever="@mdo">Apply now</button>
         </div>
       </div>
@@ -563,7 +596,7 @@
           <h2 class="h4 text-capitalize">Put your clinic now on the platform </h2>
           <p class="text-2 fw-light">We will help you and publish your clinic. All you have to do is apply to the
             service, put pictures of your clinic, and leave the rest to us. </p>
-          <button class="register_doctor btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_doctor"
             data-bs-whatever="@mdo">Apply now</button>
         </div>
         <div class="col-md-6 img wow animate__fadeInRight" data-wow-duration="1s" data-wow-offset="200">
@@ -580,7 +613,7 @@
           <p class="text-2 fw-light">
             We don't forget to organise your appointments between clinic visits and video calls, in easily and quickly
             way</p>
-          <button class="register_doctor btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_Modal"
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_doctor"
             data-bs-whatever="@mdo">Apply now</button>
         </div>
       </div>
@@ -671,6 +704,7 @@
 
 
 
+
   <footer class="py-5 bg-light">
     <div class="container">
       <div class="row">
@@ -682,7 +716,7 @@
         </div>
         <div class="col-md-2 mt-4">
           <ul class="list-unstyled">
-            <h5 class="mb-4">Pagination</h5>
+            <h5 class="mb-4">Navigation</h5>
             <li class="mb-2 text-capitalize">
               <a href="/" class="text-dark d-block">home</a>
             </li>
@@ -698,16 +732,16 @@
         <div class="col-md-4 mt-4 ms-auto">
           <h5 class="mb-4 text-capitalize">download & follow</h5>
           <div class="download_link">
-            <a href="/" class="btn btn-dark btn-lg">
+            <a href="/" class="btn btn-dark btn-lg mb-3">
               <i class="fa-brands fa-google-play"></i>
               google play
             </a>
-            <a href="/" class="btn btn-dark btn-lg vertical-middle">
+            <a href="/" class="btn btn-dark btn-lg mb-3">
               <i class="fa-brands fa-apple fs-3"></i>
               app store
             </a>
           </div>
-          <h6 class="fs-5 mt-3 text-capitalize">socail media:</h6>
+          <h6 class="fs-5 text-capitalize">socail media:</h6>
           <ul class="socail  d-flex list-unstyled">
             <li class="socail__item me-3">
               <a class="d-block fs-2" href="/">

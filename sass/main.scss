@@ -181,10 +181,14 @@ h6 {
 
 .swiper {
   width: 100%;
-  height: 100%;
 }
 .swiper-pagination-bullet-active {
   background-color: $primary;
+}
+.avatar-lg {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50%;
 }
 .avatar {
   width: 80px !important;
@@ -224,7 +228,7 @@ h6 {
   }
 }
 
-.register_Modal {
+#choose {
   .choose_type {
     position: relative;
     width: 100%;
@@ -238,9 +242,6 @@ h6 {
       left: 0px;
       width: 100%;
     }
-  }
-  .back {
-    cursor: pointer;
   }
 };
 
@@ -277,4 +278,27 @@ h6 {
 .nav-tabs .nav-link.active {
   color: $primary;
   border-bottom: 2px solid $primary;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: $wihte;
+}
+
+.time .swiper-button-next:after,
+.time .swiper-button-prev:after {
+  font-size: 30px;
+}
+
+.time .swiper-slide {
+  min-height: 150px;
+  max-height: auto;
+  .date_head {
+    font-size: 14px;
+  }
+  .link {
+    font-size: 14px;
+  }
+}
+.star_fill {
+  color: rgb(248, 224, 3);
 }
