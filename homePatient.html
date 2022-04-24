@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
     <title>patient</title>
@@ -133,12 +133,6 @@
                                         <option value="3">Three</option>
                                     </select>
                                     <label for="floatingInput">specialty </label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="doctor name">
-                                    <label>doctor name</label>
                                 </div>
                             </div>
                             <div class="col-12 col-md-2">
@@ -279,6 +273,8 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -308,7 +304,7 @@
                     <span class="text-primary fs-3 d-block mb-2">
                         <i class="fa-solid fa-users"></i>
                     </span>
-                    <h6 class="h6 text-capitalize">your    confirm with doctor</h6>
+                    <h6 class="h6 text-capitalize">your confirm with doctor</h6>
                     <p class="text-1">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Architecto a repellat,
                         tempore laborum ipsam labore velit </p>
                 </div>
@@ -432,6 +428,10 @@
             pagination: {
                 el: ".swiper-pagination",
                 dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
             breakpoints: {
                 576: {

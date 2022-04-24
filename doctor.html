@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>doctor</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-wihte">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" class="logo" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">home</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">my profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./searchDoctor.html">search doctor</a>
+                    </li>
+                </ul>
+                <div class="logout ms-auto">
+                    <button class="btn btn-danger">logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-4">
+        <div class="container-xl">
+            <div class="head">
+                <h2 class="fs-1 text-capitalize">
+                    book with the best doctors in egypt
+                </h2>
+                <p class="fs-5"><span class="text-primary">1000</span> doctors and <span class="text-primary">150</span>
+                    specialist</p>
+            </div>
+            <div class="border rounded-3 shadow-sm p-4">
+                <h6 class="h6 mb-2 text-capitalize">search doctor</h6>
+                <form action="" class="row gx-1 gy-2">
+                    <div class="col-12 col-sm-6 col-md">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect">
+                                <option selected>Open select</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <label for="floatingInput">specialty </label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md">
+                        <div class="form-floating">
+                            <input class="form-control" list="city" placeholder="area">
+                            <datalist id="area">
+                                <option value="San Francisco">
+                                <option value="New York">
+                                <option value="Seattle">
+                                <option value="Los Angeles">
+                                <option value="Chicago">
+                            </datalist>
+                            <label for="floatingInput">choose area</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md">
+                        <div class="form-floating">
+                            <input class="form-control" list="city" placeholder="city">
+                            <datalist id="city">
+                                <option value="San Francisco">
+                                <option value="New York">
+                                <option value="Seattle">
+                                <option value="Los Angeles">
+                                <option value="Chicago">
+                            </datalist>
+                            <label for="floatingInput">choose city</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" placeholder="doctor name">
+                            <label>doctor name</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <button class="btn btn-primary btn-lg w-100 h-100">search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-5 overflow-visible">
+        <div class="row gx-3 overflow-visible">
+            <div class="col-md-7">
+                <div class="detils card shadow-sm p-3 mb-3">
+                    <div class="d-flex align-items-center">
+                        <img src="./img/doctor-team (1).png" class="avatar" alt="">
+                        <div class="ms-2">
+                            <h6 class="mb-0 fs-5 text-capitalize">ahmed eldeep</h6>
+                            <p class="m-0 fs-6 fw-light text-capitalize"><span class="fw-bold">doctor</span>: eyes</p>
+                        </div>
+                    </div>
+                    <p class="text-1 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In ipsum
+                        obcaecati
+                        architecto!</p>
+                    <div class="rating fs-5">
+                        <i class="fa-solid fa-star star_fill"></i>
+                        <i class="fa-solid fa-star star_fill"></i>
+                        <i class="fa-solid fa-star star_fill"></i>
+                        <i class="fa-solid fa-star star_fill"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-1 mb-0">reviwes from 45 vistor</p>
+                    </div>
+
+                </div>
+                <div class="information  card shadow-sm p-3 mb-3">
+                    <h6 class="card-title text-capitalize h6">information about doctor</h6>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet non est
+                        repellat aliquid numquam facilis similique quasi sed in sint exercitationem, nisi consequatur,
+                        asperiores a ipsam qui? At, dolor.</p>
+                </div>
+                <div class="card d-block d-md-none  mb-3">
+                    <div class="card-header h6 text-center bg-primary text-white">
+                        information
+                    </div>
+                    <div class="card-body">
+                        <div class="row py-3 text-center">
+                            <div class="col-6">
+                                <i class="fa-solid fa-money-bill-wave fs-1"></i>
+                                <p class="text-1 mt-2 text-capitalize">250 egp</p>
+                            </div>
+                            <div class="col-6 text-success">
+                                <i class="fa-solid fa-clock fs-1"></i>
+                                <p class="text-1 mt-2 ">Waiting Time : 18 Minutes</p>
+                            </div>
+                        </div>
+                        <div class="border-top py-3">
+                            <div class="d-flex mb-3">
+                                <i class="fa-solid fa-location-dot fs-3 me-2"></i>
+                                <div>
+                                    <p class="m-0 text-2">El-Maadi : tarek abo alnoor</p>
+                                    <small class="m-0 text-muted">Book now to receive the clinic’s address details and
+                                        phone number</small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo card shadow-sm p-3 mb-3">
+                    <h6 class="card-title text-capitalize h6">photo clinic</h6>
+                    <div class="swiper slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal_slider">
+                                <img src="./img/clinic.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal_slider">
+                                <img src="./img/clinic.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal_slider">
+                                <img src="./img/clinic.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal_slider">
+                                <img src="./img/clinic.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#modal_slider">
+                                <img src="./img/clinic.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviwes card shadow-sm p-3 mb-3">
+                    <h6 class="card-title text-capitalize h6">patient reviwes</h6>
+                    <div class="reviwe_content">
+                        <div class="reviwe border-bottom py-2">
+                            <div class="rating fs-6">
+                                <i class="fa-solid fa-star star_fill"></i>
+                                <i class="fa-solid fa-star star_fill"></i>
+                                <i class="fa-solid fa-star star_fill"></i>
+                                <i class="fa-solid fa-star star_fill"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="blockquote my-2 text-2">
+                                <p>A well-known quote, contained in a blockquote element.</p>
+                            </blockquote>
+                            <h6 class="fs-6 mb-1">ahmed eldeep</h6>
+                            <small class="text-muted">Monday, 4 April 2022 05:21 PM</small>
+                        </div>
+                        <div class="reviwe border-bottom py-2">
+                            <div class="rating fs-6">
+                                <i class="fa-solid fa-star star_fill"></i>
+                                <i class="fa-solid fa-star star_fill"></i>
+                                <i class="fa-solid fa-star star_fill"></i>
+                                <i class="fa-solid fa-star star_fill"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="blockquote my-2 text-2">
+                                <p>A well-known quote, contained in a blockquote element.</p>
+                            </blockquote>
+                            <h6 class="fs-6 mb-1">ahmed eldeep</h6>
+                            <small class="text-muted">Monday, 4 April 2022 05:21 PM</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 d-none d-md-block overflow-visible">
+                <div class="card sticky-top">
+                    <div class="card-header h6 text-center bg-primary text-white">
+                        information
+                    </div>
+                    <div class="card-body">
+                        <div class="row py-3 text-center">
+                            <div class="col-6">
+                                <i class="fa-solid fa-money-bill-wave fs-1"></i>
+                                <p class="text-1 mt-2 text-capitalize">250 egp</p>
+                            </div>
+                            <div class="col-6 text-success">
+                                <i class="fa-solid fa-clock fs-1"></i>
+                                <p class="text-1 mt-2 ">Waiting Time : 18 Minutes</p>
+                            </div>
+                        </div>
+                        <div class="border-top py-3">
+                            <div class="d-flex mb-3">
+                                <i class="fa-solid fa-location-dot fs-3 me-2"></i>
+                                <div>
+                                    <p class="m-0 text-2">El-Maadi : tarek abo alnoor</p>
+                                    <small class="m-0 text-muted">Book now to receive the clinic’s address details and
+                                        phone number</small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_slider" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog  modal-xl modal-dialog-centered">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="swiper modal_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/clinic.jpeg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/clinic.jpeg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/clinic.jpeg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/clinic.jpeg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/clinic.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mt-4">
+                    <img src="./img/logo.png" class="logo" alt="">
+                    <p class="mt-3">Duis aute irure dolor inasfa reprehenderit in voluptate velit esse cillum</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">login</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose">sign up</button>
+                </div>
+                <div class="col-md-2 mt-4">
+                    <ul class="list-unstyled">
+                        <h5 class="mb-4">Navigation</h5>
+                        <li class="mb-2 text-capitalize">
+                            <a href="/" class="text-dark d-block">home</a>
+                        </li>
+                        <li class="mb-2 text-capitalize">
+                            <a href="/" class="text-dark d-block">about us</a>
+                        </li>
+                        <li class="mb-2 text-capitalize">
+                            <a href="/" class="text-dark d-block">contact us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mt-4 ms-auto">
+                    <h5 class="mb-4 text-capitalize">download & follow</h5>
+                    <div class="download_link">
+                        <a href="/" class="btn btn-dark btn-lg mb-3">
+                            <i class="fa-brands fa-google-play"></i>
+                            google play
+                        </a>
+                        <a href="/" class="btn btn-dark btn-lg mb-3">
+                            <i class="fa-brands fa-apple fs-3"></i>
+                            app store
+                        </a>
+                    </div>
+                    <h6 class="fs-5 text-capitalize">socail media:</h6>
+                    <ul class="socail  d-flex list-unstyled">
+                        <li class="socail__item me-3">
+                            <a class="d-block fs-2" href="/">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li class="socail__item me-2 ">
+                            <a class="d-block fs-2" href="/">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+        let slider = new Swiper(".slider", {
+            slidesPerView: 4,
+            spaceBetween: 10,
+
+        });
+        let modal_slider = new Swiper(".modal_slider", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+
+
+</html>

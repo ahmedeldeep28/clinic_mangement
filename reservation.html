@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>reservation</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-wihte">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" class="logo" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./homePatient.html">home</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">my profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./searchDoctor.html">search doctor</a>
+                    </li>
+                </ul>
+                <div class="logout ms-auto">
+                    <button class="btn btn-danger">logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container py-5 overflow-visible">
+        <div class="row gx-3 overflow-visible">
+            <div class="col-md-6">
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <img src="./img/doctor-team (1).png" class="avatar-lg" alt="">
+                            <div class="ms-2">
+                                <h6 class="mb-2 fs-5 text-capitalize"><small>doctor:</small> ahmed eldeep</h6>
+                                <p class="text-1 mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In ipsum obcaecati architecto!</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer py-3">
+                        <p class="text-2 mb-1">Tomorrow April 24 - From 7:45 PM To 11:30 PM </p>
+                        <p class="text-1 mb-0">Reservation required, first-come, first-served</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header h6 text-center bg-primary text-white">
+                        Enter Your Info.
+                    </div>
+                    <div class="card-body">
+                        <form action="" class="mt-4">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" placeholder="enter patient name">
+                                <label for="floatingInput">full patient name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" placeholder="enter mobile number">
+                                <label for="floatingInput">mobile number</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="email" class="form-control" placeholder="enter email address">
+                                <label for="floatingInput">email address</label>
+                            </div>
+                            <button class="btn btn-primary">book now</button>
+                            <button class="btn btn-outline-danger">cancel</button>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
