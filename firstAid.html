@@ -14,7 +14,9 @@
 
     <nav class="navbar navbar-expand-md navbar-light bg-wihte">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="./img/logo.png" style="width: 175px;" alt=""></a>
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" class="logo" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,14 +24,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">home</a>
+                        <a class="nav-link" aria-current="page" href="./homePatient.html">home</a>
                     </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">my profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./searchDoctor.html">search doctor</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">about us </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">my profile</a>
                 </ul>
                 <div class="logout ms-auto">
                     <button class="btn btn-danger">logout</button>
@@ -40,13 +46,11 @@
     
   <header class="home_header d-flex align-items-center">
     <div class="container">
-      <div class="row">
-        <div class="col-md-7 wow animate__fadeInUp" data-wow-duration="1s">
-          <h1 class="h1 text-capitalize">the most valuable thing is your health</h1>
-          <p class="text-2 ">It is our honor to offer you a health service and doctors at the highest level of
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h1 class="display-1 fw-bold text-capitalize">how to save life</h1>
+          <p class="fs-5 ">It is our honor to offer you a health service and doctors at the highest level of
             experience and efficiency</p>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose"
-            data-bs-whatever="@mdo">register now</button>
         </div>
       </div>
     </div>
@@ -54,7 +58,7 @@
 
     <section class="first_aid py-5">
         <div class="container">
-            <h2 class="text-capitalize h3">our features</h2>
+            <h2 class="text-capitalize h3">first aid</h2>
             <div class="row g-4 mt-2">
                 <div class="col-sm-6">
                     <div class="card shadow-sm">
@@ -67,7 +71,7 @@
                                     <h5 class="card-title h5 text-capitalize">heart attack</h5>
                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
                                         dolor eos. Quibusdam, velit laborum.</p>
-                                    <a href="/" class="text-capitalize">read more</a>
+                                    <a href="/" class="text-capitalize">read more <i class="fa-solid fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +132,9 @@
             <nav class="navigation mt-5" aria-label="Page">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
                     </li>
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -137,7 +143,9 @@
                     <li class="page-item"><a class="page-link" href="#">5</a></li>
                     <li class="page-item"><a class="page-link" href="#">5</a></li>
                     <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
+                        <a class="page-link" href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
                     </li>
                 </ul>
             </nav>

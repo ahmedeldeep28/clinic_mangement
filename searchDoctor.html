@@ -14,35 +14,35 @@
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-wihte">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="./img/logo.png" class="logo" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav m-auto">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="./homePatient.html">home</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">about us </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">my profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="./searchDoctor.html">search doctor</a>
-          </li>
-        </ul>
-        <div class="logout ms-auto">
-          <button class="btn btn-danger">logout</button>
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" class="logo" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./homePatient.html">home</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">my profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./searchDoctor.html">search doctor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">about us </a>
+                </li>
+            </ul>
+            <div class="logout ms-auto">
+                <button class="btn btn-danger">logout</button>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
+</nav>
 
   <header class="py-4">
     <div class="container-xl">
@@ -53,8 +53,8 @@
         <p class="fs-5"><span class="text-primary">1000</span> doctors and <span class="text-primary">150</span>
           specialist</p>
       </div>
-      <div class="card shadow-sm p-4">
-        <h6 class="h6 mb-2 text-capitalize">search doctor</h6>
+      <div class="card shadow-sm p-4 rounded-5">
+        <h6 class="h6 mb-2 text-capitalize">search a doctor</h6>
         <form action="" class="row gx-1 gy-2">
           <div class="col-12 col-sm-6 col-md">
             <div class="form-floating">
@@ -114,12 +114,11 @@
     <div class="container-xl overflow-visible">
 
       <div class="row g-3 overflow-visible">
-        <div class="col-xs-12 col-sm-4 col-lg-3 overflow-visible" >
-          <div class="accordion card shadow-sm d-none d-sm-block sticky-top">
+        <div class="col-xs-12 col-sm-4 col-lg-3 overflow-visible">
+          <div class="accordion overflow-hidden rounded-5 shadow-sm d-none d-sm-block sticky-top">
             <div class="filter_title bg-primary p-3">
               <p class="fs-5 m-0 text-white">choose your search</p>
             </div>
-
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button fs-5 text-capitalize" data-bs-toggle="collapse" data-bs-target="#title"
@@ -130,7 +129,7 @@
               </h2>
               <div id="title" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
-                  <div class="form-check">           
+                  <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="professor" id="professor">
                     <label class="form-check-label" for="professor">professor</label>
                   </div>
@@ -146,7 +145,7 @@
                     <input class="form-check-input" type="checkbox" value="specialist" id="specialist">
                     <label class="form-check-label" for="specialist">specialist</label>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -211,23 +210,23 @@
                     <label class="form-check-label" for="any">any</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="price"  value="" id="less">
+                    <input class="form-check-input" type="radio" name="price" value="" id="less">
                     <label class="form-check-label" for="less">less then 50</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="price"  value="" id="from-50">
-                    <label class="form-check-label" for="from-50">from 50 to  100 </label>
+                    <input class="form-check-input" type="radio" name="price" value="" id="from-50">
+                    <label class="form-check-label" for="from-50">from 50 to 100 </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="price"  value="" id="from-100">
+                    <input class="form-check-input" type="radio" name="price" value="" id="from-100">
                     <label class="form-check-label" for="from-100">from 100 to 200</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="price"  value="" id="from-200">
+                    <input class="form-check-input" type="radio" name="price" value="" id="from-200">
                     <label class="form-check-label" for="from-200">from 200 to 300</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="price"  value="" id="greater">
+                    <input class="form-check-input" type="radio" name="price" value="" id="greater">
                     <label class="form-check-label" for="greater">greater then 300</label>
                   </div>
                 </div>
@@ -259,20 +258,20 @@
             data-bs-target="#filter_model" data-bs-whatever="@mdo">open filter</button>
         </div>
         <div class="col-xs-12 col-sm-8 col-lg-9">
-          <div class="card shadow-sm p-2 mb-3">
+          <div class="card rounded-5 shadow-sm p-2 mb-3">
             <a href="./doctor.html" class="stretched-link"></a>
             <div class="row gx-3">
               <div class="col-md-12 col-lg-7 ps-4 pt-3">
                 <div class="d-flex align-items-center">
-                  <img src="./img/doctor-team (1).png" class="avatar" alt="">
+                  <img src="./img/doctor-team (1).png" class="avatar rounded-circle" alt="">
                   <div class="ms-2">
                     <h6 class="mb-0 fs-5 text-capitalize">ahmed eldeep</h6>
-                    <p class="m-0 fs-6 fw-light text-capitalize"><span class="fw-bold">doctor</span>: eyes</p>
+                    <small class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing</small>
                   </div>
                 </div>
-                <p class="text-2 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In ipsum obcaecati
+                <p class="text-1 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In ipsum obcaecati
                   architecto!</p>
-                <div class="rating fs-4 mt-3">
+                <div class="rating fs-5 mt-3">
                   <i class="fa-solid fa-star star_fill"></i>
                   <i class="fa-solid fa-star star_fill"></i>
                   <i class="fa-solid fa-star star_fill"></i>
@@ -307,29 +306,33 @@
                 </ul>
               </div>
               <div class="col-md-12 col-lg-5 d-flex align-items-center">
-                <div class="swiper time">
+                <div class="swiper time py-5">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide text-center card bg-light">
-                      <div class="date_head bg-primary p-2 text-white ">25/8</div>
+                      <div class="date_head bg-primary p-2 text-white ">today</div>
                       <small class="py-4 px-1">from 10pm to 11pm</small>
                       <a href="./reservation.html" class="btn btn-danger btn-sm stretched-link">book</a>
                     </div>
 
                     <div class="swiper-slide text-center card bg-light">
-                      <div class="date_head bg-primary p-2 text-white ">25/8</div>
+                      <div class="date_head bg-primary p-2 text-white ">tomorrow</div>
                       <small class="py-4 px-1">from 10pm to 11pm</small>
                       <a href="./reservation.html" class="btn btn-danger btn-sm stretched-link">book</a>
                     </div>
                     <div class="swiper-slide text-center card bg-light">
-                      <div class="date_head bg-primary p-2 text-white ">25/8</div>
+                      <div class="date_head bg-primary p-2 text-white ">sat 25/4</div>
                       <small class="py-4 px-1 text-1">from 10 pm to 11 pm</small>
                       <a href="./reservation.html" class="btn btn-danger btn-sm stretched-link">book</a>
                     </div>
-
+                    <div class="swiper-slide text-center card bg-light">
+                      <div class="date_head bg-primary p-2 text-white ">sat 25/4</div>
+                      <small class="py-4 px-1 text-1">from 10 pm to 11 pm</small>
+                      <a class="btn btn-danger btn-sm">book</a>
+                    </div>
                   </div>
                   <div class="swiper-pagination"></div>
-
-
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
                 </div>
               </div>
             </div>
@@ -340,6 +343,7 @@
   </section>
 
 
+  <!-- modal filter -->
   <div class="modal fade" id="filter_model" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -360,19 +364,22 @@
               <div id="title" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+                    <input class="form-check-input" type="checkbox" value="professor" id="professor">
+                    <label class="form-check-label" for="professor">professor</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+                    <input class="form-check-input" type="checkbox" value="lecturer" id="lecturer">
+                    <label class="form-check-label" for="lecturer">lecturer</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="consultant" id="consultant">
+                    <label class="form-check-label" for="consultant">consultant</label>
                   </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="specialist" id="specialist">
+                    <label class="form-check-label" for="specialist">specialist</label>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -387,22 +394,16 @@
               <div id="specialist" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="all" id="all">
+                    <label class="form-check-label" for="all">all</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" id="adult">
+                    <label class="form-check-label" for="adult">adult liver</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" id="childerns">
+                    <label class="form-check-label" for="childerns">childerns liver</label>
                   </div>
                 </div>
               </div>
@@ -418,22 +419,12 @@
               <div id="gender" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" id="doctor">
+                    <label class="form-check-label" for="doctor">doctor</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" id="famale">
+                    <label class="form-check-label" for="famale">famale liver</label>
                   </div>
                 </div>
               </div>
@@ -449,22 +440,28 @@
               <div id="price" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="radio" name="price" value="" id="any">
+                    <label class="form-check-label" for="any">any</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="radio" name="price" value="" id="less">
+                    <label class="form-check-label" for="less">less then 50</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="radio" name="price" value="" id="from-50">
+                    <label class="form-check-label" for="from-50">from 50 to 100 </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="price" value="" id="from-100">
+                    <label class="form-check-label" for="from-100">from 100 to 200</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="price" value="" id="from-200">
+                    <label class="form-check-label" for="from-200">from 200 to 300</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="price" value="" id="greater">
+                    <label class="form-check-label" for="greater">greater then 300</label>
                   </div>
                 </div>
               </div>
@@ -480,22 +477,12 @@
               <div id="building" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" id="hospital">
+                    <label class="form-check-label" for="hospital">hospital</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Default checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" id="clinic">
+                    <label class="form-check-label" for="clinic">clinic</label>
                   </div>
                 </div>
               </div>
@@ -504,7 +491,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">search</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">search</button>
         </div>
       </div>
     </div>
@@ -513,58 +500,58 @@
 
   <footer class="py-5 bg-light">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 mt-4">
-                <img src="./img/logo.png" class="logo" alt="">
-                <p class="mt-3">Duis aute irure dolor inasfa reprehenderit in voluptate velit esse cillum</p>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">login</button>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose">sign up</button>
-            </div>
-            <div class="col-md-2 mt-4">
-                <ul class="list-unstyled">
-                    <h5 class="mb-4">Navigation</h5>
-                    <li class="mb-2 text-capitalize">
-                        <a href="/" class="text-dark d-block">home</a>
-                    </li>
-                    <li class="mb-2 text-capitalize">
-                        <a href="/" class="text-dark d-block">about us</a>
-                    </li>
-                    <li class="mb-2 text-capitalize">
-                        <a href="/" class="text-dark d-block">contact us</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 mt-4 ms-auto">
-                <h5 class="mb-4 text-capitalize">download & follow</h5>
-                <div class="download_link">
-                    <a href="/" class="btn btn-dark btn-lg mb-3">
-                        <i class="fa-brands fa-google-play"></i>
-                        google play
-                    </a>
-                    <a href="/" class="btn btn-dark btn-lg mb-3">
-                        <i class="fa-brands fa-apple fs-3"></i>
-                        app store
-                    </a>
-                </div>
-                <h6 class="fs-5 text-capitalize">socail media:</h6>
-                <ul class="socail  d-flex list-unstyled">
-                    <li class="socail__item me-3">
-                        <a class="d-block fs-2" href="/">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                    </li>
-
-                    <li class="socail__item me-2 ">
-                        <a class="d-block fs-2" href="/">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="row">
+        <div class="col-md-4 mt-4">
+          <img src="./img/logo.png" class="logo" alt="">
+          <p class="mt-3">Duis aute irure dolor inasfa reprehenderit in voluptate velit esse cillum</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">login</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose">sign up</button>
         </div>
+        <div class="col-md-2 mt-4">
+          <ul class="list-unstyled">
+            <h5 class="mb-4">Navigation</h5>
+            <li class="mb-2 text-capitalize">
+              <a href="/" class="text-dark d-block">home</a>
+            </li>
+            <li class="mb-2 text-capitalize">
+              <a href="/" class="text-dark d-block">about us</a>
+            </li>
+            <li class="mb-2 text-capitalize">
+              <a href="/" class="text-dark d-block">contact us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mt-4 ms-auto">
+          <h5 class="mb-4 text-capitalize">download & follow</h5>
+          <div class="download_link">
+            <a href="/" class="btn btn-dark btn-lg mb-3">
+              <i class="fa-brands fa-google-play"></i>
+              google play
+            </a>
+            <a href="/" class="btn btn-dark btn-lg mb-3">
+              <i class="fa-brands fa-apple fs-3"></i>
+              app store
+            </a>
+          </div>
+          <h6 class="fs-5 text-capitalize">socail media:</h6>
+          <ul class="socail  d-flex list-unstyled">
+            <li class="socail__item me-3">
+              <a class="d-block fs-2" href="/">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+
+            <li class="socail__item me-2 ">
+              <a class="d-block fs-2" href="/">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
 
   <script src="./js/swiper-bundle.min.js"></script>
@@ -579,7 +566,10 @@
         el: ".swiper-pagination",
         dynamicBullets: true,
       },
-
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
   </script>
 </body>

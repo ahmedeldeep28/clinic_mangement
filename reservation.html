@@ -27,13 +27,13 @@
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">about us </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#">my profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./searchDoctor.html">search doctor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about us </a>
                     </li>
                 </ul>
                 <div class="logout ms-auto">
@@ -47,13 +47,14 @@
     <div class="container py-5 overflow-visible">
         <div class="row gx-3 overflow-visible">
             <div class="col-md-6">
-                <div class="card shadow-sm mb-3">
+                <div class="card rounded-5 shadow-sm mb-3">
                     <div class="card-body">
                         <div class="d-flex align-items-center">
-                            <img src="./img/doctor-team (1).png" class="avatar-lg" alt="">
+                            <img src="./img/doctor-team (1).png" class="avatar-lg rounded-circle" alt="">
                             <div class="ms-2">
                                 <h6 class="mb-2 fs-5 text-capitalize"><small>doctor:</small> ahmed eldeep</h6>
-                                <p class="text-1 mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In ipsum obcaecati architecto!</p>
+                                <p class="text-1 mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
+                                    ipsum obcaecati architecto!</p>
 
                             </div>
                         </div>
@@ -65,7 +66,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card">
+                <div class="card rounded-5 overflow-hidden">
                     <div class="card-header h6 text-center bg-primary text-white">
                         Enter Your Info.
                     </div>
@@ -79,9 +80,16 @@
                                 <input type="text" class="form-control" placeholder="enter mobile number">
                                 <label for="floatingInput">mobile number</label>
                             </div>
+
                             <div class="form-floating mb-4">
-                                <input type="email" class="form-control" placeholder="enter email address">
-                                <label for="floatingInput">email address</label>
+                                <select class="form-select">
+                                    <option selected>7:45 pm</option>
+                                    <option value="1">8:00 pm</option>
+                                    <option value="1">9:30 pm</option>
+                                    <option value="1">10:00 pm</option>
+                                    <option value="1">11:30 pm</option>
+                                </select>
+                                <label for="floatingSelect">select time</label>
                             </div>
                             <button class="btn btn-primary">book now</button>
                             <button class="btn btn-outline-danger">cancel</button>
