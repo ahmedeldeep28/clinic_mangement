@@ -13,6 +13,12 @@ input::placeholder,
 label {
   text-transform: capitalize;
 }
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
 section,
 .container,
 .row {
@@ -241,8 +247,10 @@ h6 {
   height: 120px;
   position: relative;
   overflow: hidden;
-  margin: auto;
-  border-radius: 50%;
+  &.add_clinic {
+    width: 180px;
+    height: 180px;
+  }
   cursor: pointer;
   input {
     position: absolute;
@@ -255,11 +263,12 @@ h6 {
     z-index: 10;
   }
   span {
-    position: absolute;
     width: 100%;
     height: 100%;
-    left: 0px;
-    top: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -313,25 +322,43 @@ h6 {
   background-color: $wihte;
 }
 
-.time .swiper-button-next:after,
-.time .swiper-button-prev:after {
-  font-size: 30px;
-}
-.time .swiper-button-next.swiper-button-disabled,
-.time .swiper-button-prev.swiper-button-disabled {
-  display: none !important;
-}
-.time .swiper-button-next, .time .swiper-button-prev {
-  top: 93%;
-}
-.time .swiper-slide {
-  min-height: 150px;
-  max-height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .date_head {
-    font-size: 14px;
+.time {
+  .swiper-slide {
+    min-height: 150px;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    .date_head {
+      font-size: 14px;
+    }
+    &.disabled .date_head {
+      background-color: #009dff!important;
+      opacity: .65;
+    }
+    &.disabled .btn-danger {
+      background-color: #dc3545 !important;
+      pointer-events: none;
+      opacity: .65;
+    }
+    
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 30px;
+  }
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    display: none !important;
+  }
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    display: none !important;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 93%;
   }
 }
 .star_fill {
@@ -350,21 +377,28 @@ h6 {
     transition: all 0.4s linear;
   }
 }
+.first_aid .card {
+  img {
+    transition: all 0.4s ease-in-out;
+  }
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
 #calendar {
   .calendar-year .icon-button {
     display: none !important;
   }
   .type-visit-home,
-  .event-bullet-visit-home{
+  .event-bullet-visit-home {
     background: $warning;
   }
   .type-visit-clinic,
   .event-bullet-visit-clinic {
-    background: $primary ;
+    background: $primary;
   }
   .type-video-call,
-  .event-bullet-video-call{
-  background: $success ;
+  .event-bullet-video-call {
+    background: $success;
   }
-
 }

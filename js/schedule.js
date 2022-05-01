@@ -5,13 +5,6 @@ $('#calendar').evoCalendar({
 
 $('#calendar').evoCalendar('addCalendarEvent', [
     {
-        id: 'kNybja6',
-        name: '8 visit home',
-        date: '04/21/2022',
-        description: 'Lorem ipsum dolor sit',
-        type: 'visit-home',
-    },
-    {
         id: 'a2',
         name: '5 video call',
         date: '04/22/2022',
@@ -25,13 +18,7 @@ $('#calendar').evoCalendar('addCalendarEvent', [
         description: 'Lorem ipsum dolor sit',
         type: 'visit-clinic',
     },
-    {
-        id: 'a3',
-        name: '8 visit home',
-        date: '04/22/2022',
-        description: 'Lorem ipsum dolor sit',
-        type: 'visit-home',
-    },
+
 
 ]);
 
