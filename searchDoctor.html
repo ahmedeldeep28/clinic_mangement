@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-light bg-wihte">
+  <nav class="navbar navbar-expand-lg navbar-light bg-wihte">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="./img/logo.png" class="logo" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -28,16 +28,16 @@
           </li>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./medcailHistory.html">medcail history</a>
+            <a class="nav-link" href="./profilePatient.html">my profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./searchDoctor.html">search doctor</a>
+            <a class="nav-link active" href="./searchDoctor.html">search a doctor</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./firstAid.html">first aid </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">about us </a>
+            <a class="nav-link" href="./medicalHistory.html">medical history</a>
           </li>
         </ul>
         <div class="logout ms-auto">
@@ -58,7 +58,7 @@
       </div>
       <div class="card shadow-sm p-4 rounded-5">
         <h6 class="h6 mb-2 text-capitalize">search a doctor</h6>
-        <form action="" class="row gx-1 gy-2">
+        <form action="" class="row gx-1 gy-2 pb-1">
           <div class="col-12 col-sm-6 col-md">
             <div class="form-floating">
               <select class="form-select" id="floatingSelect">
@@ -501,71 +501,144 @@
   </div>
 
 
-  <footer class="py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mt-4">
-          <img src="./img/logo.png" class="logo" alt="">
-          <p class="mt-3">Duis aute irure dolor inasfa reprehenderit in voluptate velit esse cillum</p>
-        </div>
-        <div class="col-md-2 mt-4">
-          <ul class="list-unstyled">
-            <h5 class="mb-4">Navigation</h5>
-            <li class="mb-2 text-capitalize">
-              <a href="/" class="text-dark d-block">home</a>
-            </li>
-            <li class="mb-2 text-capitalize">
-              <a href="/" class="text-dark d-block">about us</a>
-            </li>
-            <li class="mb-2 text-capitalize">
-              <a href="/" class="text-dark d-block">contact us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-2 mt-4">
-          <ul class="list-unstyled">
-            <h5 class="mb-4">Navigation</h5>
-            <li class="mb-2 text-capitalize">
-              <a href="/" class="text-dark d-block">home</a>
-            </li>
-            <li class="mb-2 text-capitalize">
-              <a href="/" class="text-dark d-block">about us</a>
-            </li>
-            <li class="mb-2 text-capitalize">
-              <a href="/" class="text-dark d-block">contact us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4 mt-4 ms-auto">
-          <h5 class="mb-4 text-capitalize">download & follow</h5>
-          <div class="download_link">
-            <a href="/" class="btn btn-dark btn-lg mb-3">
-              <i class="fa-brands fa-google-play"></i>
-              google play
-            </a>
-            <a href="/" class="btn btn-dark btn-lg mb-3">
-              <i class="fa-brands fa-apple fs-3"></i>
-              app store
-            </a>
-          </div>
-          <h6 class="fs-5 text-capitalize">socail media:</h6>
-          <ul class="socail  d-flex list-unstyled">
-            <li class="socail__item me-3">
-              <a class="d-block fs-2" href="/">
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-            </li>
+  <div class="modal fade" id="register_doctor" tabindex="-1" aria-hidden="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content overflow-hidden">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <img src="./img/logo.png" alt="" class="logo">
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose">
+                    <i class="fa-solid fa-angle-left me-2"></i>back
+                </h5>
+                <form action="">
+                    <div class="upload_img rounded-circle  m-auto mb-4">
+                        <input type="file" name="image" id="file_upload">
+                        <span class="bg-light text-center py-4">
+                            <i class="fa-solid fa-camera fs-1 text-wite"></i>
+                            <p>add photo</p>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 pe-md-1 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="first name *">
+                                <label>first name *</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ps-md-1 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="name@example.com">
+                                <label>last name *</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="specialty" list="specialty"
+                            placeholder="specialty">
+                        <datalist id="specialty">
+                            <option value="text">specialty</option>
+                        </datalist>
+                        <label>specialty *</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="phone number">
+                        <label>phone number *</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" placeholder="name@example.com">
+                        <label>Email address *</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" placeholder="password">
+                        <label>password *</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="form-control" placeholder="enter mobile number">
+                        <label for="floatingInput">Birth Date</label>
+                    </div>
+                    <button class="btn btn-primary btn-lg w-100">sign in</button>
+                </form>
+            </div>
 
-            <li class="socail__item me-2 ">
-              <a class="d-block fs-2" href="/">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </li>
-          </ul>
         </div>
-      </div>
     </div>
-  </footer>
+</div>
+
+<footer class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <img src="./img/logo.png" class="logo" alt="">
+                <p class="mt-3">Duis aute irure dolor inasfa reprehenderit in voluptate velit esse cillum</p>
+            </div>
+            <div class="col-md-2 mt-4">
+                <ul class="list-unstyled">
+                    <h5 class="mb-4">Navigation</h5>
+                    <li class="mb-2 text-capitalize">
+                        <a href="/" class="text-dark d-block">home</a>
+                    </li>
+                    <li class="mb-2 text-capitalize">
+                        <a href="./profilePatient.html" class="text-dark d-block">my profile</a>
+                    </li>
+                    <li class="mb-2 text-capitalize">
+                        <a href="./searchDoctor.html" class="text-dark d-block">Search A Doctor</a>
+                    </li>
+                    <li class="mb-2 text-capitalize">
+                        <a href="./firstAid.html" class="text-dark d-block">First Aid</a>
+                    </li>
+                    <li class="mb-2 text-capitalize">
+                        <a href="./about.html" class="text-dark d-block">about us</a>
+                    </li>
+                    <li class="mb-2 text-capitalize">
+                        <a href="./contact.html" class="text-dark d-block">contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 mt-4">
+                <ul class="list-unstyled">
+                    <h5 class="mb-4 text-capitalize">are you doctor?</h5>
+                    <li class="mb-2 text-capitalize">
+
+                        <a href="/" class="text-dark d-block" data-bs-toggle="modal"
+                            data-bs-target="#register_doctor">join now</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 mt-4">
+                <h5 class="mb-4 text-capitalize">download & follow</h5>
+                <div class="download_link">
+                    <a href="/" class="btn btn-dark btn-lg mb-3">
+                        <i class="fa-brands fa-google-play"></i>
+                        google play
+                    </a>
+                    <a href="/" class="btn btn-dark btn-lg mb-3">
+                        <i class="fa-brands fa-apple fs-3"></i>
+                        app store
+                    </a>
+                </div>
+                <h6 class="fs-5 text-capitalize">social media:</h6>
+                <ul class="socail  d-flex list-unstyled">
+                    <li class="socail__item me-3">
+                        <a class="d-block fs-2" href="/">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+
+                    <li class="socail__item me-2 ">
+                        <a class="d-block fs-2" href="/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
   <script src="./js/swiper-bundle.min.js"></script>

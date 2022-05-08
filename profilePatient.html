@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="./css/main.css">
-    <title>first aid</title>
+    <title>profile Patient</title>
 </head>
 
 <body>
@@ -28,13 +28,13 @@
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./profilePatient.html">my profile</a>
+                        <a class="nav-link active" href="./profilePatient.html">my profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./searchDoctor.html">search a doctor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./firstAid.html">first aid </a>
+                        <a class="nav-link" href="./firstAid.html">first aid </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./medicalHistory.html">medical history</a>
@@ -47,157 +47,138 @@
         </div>
     </nav>
 
-    <header class="fisrtaid_header d-flex align-items-center">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h1 class="display-1 fw-bold text-capitalize">how to save life</h1>
+    <div class="container profile_patient py-5">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="nav card rounded-5 overflow-hidden flex-column nav-pills">
+                    <button class="nav-link active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile"
+                        role="tab" aria-controls="profile" aria-selected="true">profile</button>
+                    <button class="nav-link" id="password-tab" data-bs-toggle="pill" data-bs-target="#password"
+                        role="tab" aria-controls="password" aria-selected="false">change password</button>
+                    <button class="nav-link" id="appointments-tab" data-bs-toggle="pill" data-bs-target="#appointments"
+                        role="tab" aria-controls="appointments" aria-selected="false">my appointments</button>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <!-- form Manage Profile -->
+                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="card rounded-5 overflow-hidden">
+                            <div class="card-header h6 text-center bg-primary text-white">
+                                Manage Profile
+                            </div>
+                            <div class="card-body py-4">
+                                <form action="">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" placeholder="your name">
+                                        <label for="floatingInput">your name</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" placeholder="enter mobile number">
+                                        <label for="floatingInput">email address</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="tel" class="form-control" placeholder="enter mobile number">
+                                        <label for="floatingInput">mobile number</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="date" class="form-control" placeholder="enter mobile number">
+                                        <label for="floatingInput">Birth Date</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" list="area" placeholder="area">
+                                        <datalist id="area">
+                                            <option value="San Francisco">
+                                            <option value="New York">
+                                            <option value="Seattle">
+                                            <option value="Los Angeles">
+                                            <option value="Chicago">
+                                        </datalist>
+                                        <label for="floatingInput">choose area</label>
+                                    </div>
+                                    <button class="btn btn-primary">save now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form change password -->
+                    <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+                        <div class="card rounded-5 overflow-hidden">
+                            <div class="card-header h6 text-center bg-primary text-white">
+                                change password
+                            </div>
+                            <div class="card-body">
+                                <form action="" class="mt-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" placeholder="enter password">
+                                        <label for="floatingInput">password</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" placeholder="mew password">
+                                        <label for="floatingInput">new password</label>
+                                    </div>
+                                    <button class="btn btn-primary">book now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  Manage appointments -->
+                    <div class="tab-pane fade" id="appointments" role="tabpanel" aria-labelledby="appointments-tab">
+                        <div class="card rounded-5 overflow-hidden">
+                            <div class="card-header h6 text-center bg-primary text-white">
+                                appointments
+                            </div>
+                            <table class="table table-hover">
+                                <thead class="table-light py-4">
+                                    <tr class="border-bottom py-4">
+                                        <th scope="col">doctor name</th>
+                                        <th scope="col">location</th>
+                                        <th scope="col">appointment</th>
+                                        <th scope="col">action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>ahmed eldeep</th>
+                                        <td>Abu Kabir Sharqieh, Sabri Sharif Street</td>
+                                        <td>2001 Feb 5 9:45</td>
+                                        <td>
+                                            <button class="btn btn-danger">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>ahmed eldeep</th>
+                                        <td>Abu Kabir Sharqieh, Sabri Sharif Street</td>
+                                        <td>2001 Feb 5 9:45</td>
+                                        <td>
+                                            <button class="btn btn-danger">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>ahmed eldeep</th>
+                                        <td>Abu Kabir Sharqieh, Sabri Sharif Street</td>
+                                        <td>2001 Feb 5 9:45</td>
+                                        <td>
+                                            <button class="btn btn-danger">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <section class="first_aid py-5">
-        <div class="container">
-            <h2 class="text-capitalize h3"><span class="text-danger">first</span>Aid</h2>
-            <div class="row g-4 mt-2">
-                <div class="col-sm-6">
-                    <div class="card shadow-sm rounded-5 overflow-hidden">
-                        <div class="row g-0">
-                            <div class="col-12 col-lg-5 overflow-hidden">
-                                <img src="./img/person.png" class="img-cover rounded-start" alt="...">
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="card-body">
-                                    <h5 class="card-title h5 text-capitalize">heart attack</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                                        dolor eos. Quibusdam, velit laborum.</p>
-                                    <a href="./firstAidPage.html" class="text-capitalize stretched-link">read more
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card shadow-sm rounded-5 overflow-hidden">
-                        <div class="row g-0">
-                            <div class="col-12 col-lg-5 overflow-hidden">
-                                <img src="./img/person.png" class="img-cover rounded-start" alt="...">
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="card-body">
-                                    <h5 class="card-title h5 text-capitalize">heart attack</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                                        dolor eos. Quibusdam, velit laborum.</p>
-                                    <a href="./firstAidPage.html" class="text-capitalize stretched-link">read more
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card shadow-sm rounded-5 overflow-hidden">
-                        <div class="row g-0">
-                            <div class="col-12 col-lg-5 overflow-hidden">
-                                <img src="./img/person.png" class="img-cover rounded-start" alt="...">
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="card-body">
-                                    <h5 class="card-title h5 text-capitalize">heart attack</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                                        dolor eos. Quibusdam, velit laborum.</p>
-                                    <a href="./firstAidPage.html" class="text-capitalize stretched-link">read more
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card shadow-sm rounded-5 overflow-hidden">
-                        <div class="row g-0">
-                            <div class="col-12 col-lg-5 overflow-hidden">
-                                <img src="./img/person.png" class="img-cover rounded-start" alt="...">
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="card-body">
-                                    <h5 class="card-title h5 text-capitalize">heart attack</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                                        dolor eos. Quibusdam, velit laborum.</p>
-                                    <a href="./firstAidPage.html" class="text-capitalize stretched-link">read more
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card shadow-sm rounded-5 overflow-hidden">
-                        <div class="row g-0">
-                            <div class="col-12 col-lg-5 overflow-hidden">
-                                <img src="./img/person.png" class="img-cover rounded-start" alt="...">
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="card-body">
-                                    <h5 class="card-title h5 text-capitalize">heart attack</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                                        dolor eos. Quibusdam, velit laborum.</p>
-                                    <a href="./firstAidPage.html" class="text-capitalize stretched-link">read more
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card shadow-sm rounded-5 overflow-hidden">
-                        <div class="row g-0">
-                            <div class="col-12 col-lg-5 overflow-hidden">
-                                <img src="./img/person.png" class="img-cover rounded-start" alt="...">
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="card-body">
-                                    <h5 class="card-title h5 text-capitalize">heart attack</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                                        dolor eos. Quibusdam, velit laborum.</p>
-                                    <a href="./firstAidPage.html" class="text-capitalize stretched-link">read more
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="navigation mt-5" aria-label="Page">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                            <i class="fa-solid fa-angle-left"></i>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </section>
+
+
 
     <div class="modal fade" id="register_doctor" tabindex="-1" aria-hidden="false">
         <div class="modal-dialog modal-lg">
@@ -337,6 +318,9 @@
             </div>
         </div>
     </footer>
+
+
+
 
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>

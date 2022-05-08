@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
 $primary: #009dff;
 $light: #edf1f1;
 $wihte: #ffffff;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 body {
-  font-family: "Poppins", sans-serif;
   position: relative;
+  font-family: 'Tajawal', sans-serif !important;
 }
 input::placeholder,
 label {
@@ -34,8 +33,7 @@ img {
   object-fit: cover;
   object-position: center;
 }
-.vh-50{height: 50vh;}
-.vh-75{height: 75vh;}
+
 a {
   text-decoration: none !important;
 }
@@ -76,7 +74,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Tajawal', sans-serif !important;
 }
 
 .h1 {
@@ -162,13 +160,8 @@ h6 {
 }
 .home_header {
   height: 85vh;
+  width: 100%;
   background: url("../img/doctor-cover.webp") center fixed;
-  background-size: cover;
-}
-
-.fisrtaid_header {
-  height: 85vh;
-  background: url("../img/first_aid.jpg") center fixed;
   background-size: cover;
 }
 .header_contact {
