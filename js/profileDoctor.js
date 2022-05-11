@@ -28,7 +28,7 @@ let cancel_edit_doctor = document.getElementById("cancel_edit_doctor");
 cancel_edit_doctor.addEventListener("click", () => {
     document.getElementById("form_doctor").classList.toggle("d-none");
     document.getElementById("info_doctor").classList.toggle("d-none");
-    cancel_edit_doctor.classList.toggle("d-none")
+    edit_doctor_btn.classList.toggle("d-none")
 });
 
 
@@ -54,3 +54,19 @@ let slider = new Swiper(".slider", {
         },
     },
 });
+
+var demo = document.getElementById("demo");
+var get_location_btn = document.getElementById("get_location_btn");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        demo.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    document.getElementById("lat").setAttribute("value",position.coords.latitude);
+    document.getElementById("long").setAttribute("value",position.coords.longitude);
+    get_location_btn.textContent = "It was completed"
+}
+get_location_btn.addEventListener("click",() => getLocation())

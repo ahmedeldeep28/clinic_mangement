@@ -57,6 +57,7 @@
                 <p class="fs-5"><span class="text-primary">1000</span> doctors and <span class="text-primary">150</span>
                     specialist</p>
             </div>
+            <!-- card and form search doctor -->
             <div class="card shadow-sm p-4 rounded-5">
                 <h6 class="h6 mb-2 text-capitalize">search a doctor</h6>
                 <form action="" class="row gx-1 gy-2">
@@ -113,8 +114,10 @@
         </div>
     </header>
 
-    <div class="container py-5 overflow-visible">
+    <main class="container py-5 overflow-visible">
         <div class="row gx-3 overflow-visible">
+
+            <!-- Information about the doctor and clinic  -->
             <div class="col-md-7">
                 <div class="detils card shadow-sm p-3 mb-3 rounded-5">
                     <div class="d-flex align-items-center">
@@ -134,16 +137,18 @@
                         <i class="fa-solid fa-star star_fill"></i>
                         <i class="fa-solid fa-star star_fill"></i>
                         <i class="fa-solid fa-star"></i>
-                        <p class="text-1 mb-0">reviwes from 45 vistor</p>
+                        <p class="text-1 mb-0">reviews from 45 visitor</p>
                     </div>
 
                 </div>
-                <div class="information  card shadow-sm p-3 mb-3 rounded-5">
+                <!-- dates and selection of dates -->
+                <div class="card shadow-sm p-3 mb-3 rounded-5">
                     <h6 class="card-title text-capitalize h6">information about doctor</h6>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet non est
                         repellat aliquid numquam facilis similique quasi sed in sint exercitationem, nisi consequatur,
                         asperiores a ipsam qui? At, dolor.</p>
                 </div>
+                <!-- Information About Doctor -->
                 <div class="card d-block d-md-none overflow-hidden mb-3 rounded-5">
                     <div class="card-header h6 text-center bg-primary text-white">
                         information
@@ -207,6 +212,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- clinic photo -->
                 <div class="photo card shadow-sm p-3 mb-3 rounded-5">
                     <h6 class="card-title text-capitalize h6">photo clinic</h6>
                     <div class="swiper slider">
@@ -229,6 +235,47 @@
                         </div>
                     </div>
                 </div>
+                <!-- Add your review -->
+                <div class="card-Rating card shadow-sm p-3 mb-3 rounded-5">
+                    <h6 class="card-title text-capitalize h6">Add your review</h6>
+                    <form action="">
+                        <div class="my-1">
+                            <h6 class="mb-0 fs-5 text-capitalize">ahmed eldeep</h6>
+
+                            <div class="stars">
+                                <input type="radio" id="star1" name="rating" value="1" />
+                                <input type="radio" id="star2" name="rating" value="2" />
+                                <input type="radio" id="star3" name="rating" value="3" />
+                                <input type="radio" id="star4" name="rating" value="4" />
+                                <input type="radio" id="star5" name="rating" value="5" />
+
+                                <label for="star1" class="fs-5">
+                                    <i class="fa fa-star icon"></i>
+                                </label>
+                                <label for="star2" class="fs-5">
+                                    <i class="fa fa-star icon"></i>
+                                </label>
+                                <label for="star3" class="fs-5">
+                                    <i class="fa fa-star icon"></i>
+                                </label>
+                                <label for="star4" class="fs-5">
+                                    <i class="fa fa-star icon"></i>
+                                </label>
+                                <label for="star5" class="fs-5">
+                                    <i class="fa fa-star icon"></i>
+                                </label>
+
+                            </div>
+                        </div>
+                        <div class="control">
+                            <label class="lable" for="">comment</label>
+                            <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">submit</button>
+                    </form>
+
+                </div>
+                <!-- Patient Reviews -->
                 <div class="reviews card shadow-sm p-3 mb-3 rounded-5">
                     <h6 class="card-title text-capitalize h6">patient reviews</h6>
                     <div class="review_content">
@@ -322,6 +369,8 @@
                     <button class="btn btn-secondary">load more</button>
                 </div>
             </div>
+
+            <!-- dates and selection of dates -->
             <div class="col-md-5 d-none d-md-block overflow-visible">
                 <div class="card sticky-top rounded-5 overflow-hidden">
                     <div class="card-header h6 text-center bg-primary text-white">
@@ -388,8 +437,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
+    <!-- modal slider clinic img -->
     <div class="modal fade" id="modal_slider" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog  modal-xl modal-dialog-centered">
             <div class="modal-content border-0 bg-transparent">
@@ -418,6 +468,7 @@
         </div>
     </div>
 
+    <!-- modal register doctor -->
     <div class="modal fade" id="register_doctor" tabindex="-1" aria-hidden="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content overflow-hidden">

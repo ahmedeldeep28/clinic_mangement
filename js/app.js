@@ -1,4 +1,3 @@
-new WOW().init();
 let swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
     spaceBetween: 10,
@@ -13,5 +12,6 @@ let swiper = new Swiper(".mySwiper", {
         },
     },
 });
+new WOW().init();
 
 
