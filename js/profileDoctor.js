@@ -55,13 +55,12 @@ let slider = new Swiper(".slider", {
     },
 });
 
-var demo = document.getElementById("demo");
 var get_location_btn = document.getElementById("get_location_btn");
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        demo.innerHTML = "Geolocation is not supported by this browser.";
+        console.log("Geolocation is not supported by this browser.");
     }
 }
 function showPosition(position) {

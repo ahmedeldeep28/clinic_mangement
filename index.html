@@ -36,15 +36,17 @@
           </li>
         </ul>
         <div class="auth ms-auto">
-          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#login">login</button>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose">register</button>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#choose_login">login</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose_register">register</button>
         </div>
       </div>
     </div>
   </nav>
 
 
-  <div class="modal fade" id="choose" tabindex="-1" aria-hidden="false">
+
+  <!-- modal  choose register -->
+  <div class="modal fade choose" id="choose_register" tabindex="-1" aria-hidden="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content overflow-hidden">
         <div class="modal-header">
@@ -74,7 +76,39 @@
     </div>
   </div>
 
-  <div class="modal fade" id="login" tabindex="-1" aria-hidden="false">
+  <!-- modal  choose login -->
+  <div class="modal fade choose" id="choose_login" tabindex="-1" aria-hidden="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="./img/logo.png" alt="" class="logo">
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-5">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="choose_type" data-bs-toggle="modal" data-bs-target="#login_doctor">
+                <img src="./img/Wear a Mask.png" class="w-100" alt="">
+                <p class="text p-2 bg-secondary text-white rounded text-center">i am doctor</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="choose_type" data-bs-toggle="modal" data-bs-target="#login_patient">
+                <img src="./img/Hello.png" class="w-100" alt="">
+                <p class="text p-2 bg-secondary text-white rounded text-center">i am patient</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- modal  patient login -->
+  <div class="modal fade" id="login_patient" tabindex="-1" aria-hidden="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content overflow-hidden">
         <div class="modal-header">
@@ -99,7 +133,9 @@
             </div>
             <button class="btn btn-primary btn-lg w-100">sign in</button>
             <p class="my-3 text-center">
-              don`t have account?<a class="text-capitalize" data-bs-toggle="modal" href="#choose" role="button"> create
+              <!-- link open modal choose register -->
+              don`t have account?<a class="text-capitalize" data-bs-toggle="modal" href="#choose_register"
+                role="button"> create
                 account</a>
             </p>
           </form>
@@ -108,6 +144,44 @@
     </div>
   </div>
 
+  <!-- modal  doctor login -->
+  <div class="modal fade" id="login_doctor" tabindex="-1" aria-hidden="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="./img/logo.png" alt="" class="logo">
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <h4 class="h4 mb-1 text-capitalize">Welcome</h4>
+          <form action="" class="mt-5">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" placeholder="name@example.com">
+              <label>Email address *</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" placeholder="password">
+              <label>password *</label>
+            </div>
+            <div class="mb-3 text-center">
+              <a href="/" class="text-capitalize">forget your password?</a>
+            </div>
+            <button class="btn btn-primary btn-lg w-100">sign in</button>
+            <p class="my-3 text-center">
+              <!-- link open modal choose register-->
+              don`t have account?<a class="text-capitalize" data-bs-toggle="modal" href="#choose_register"
+                role="button"> create
+                account</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal  register doctor -->
   <div class="modal fade" id="register_doctor" tabindex="-1" aria-hidden="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content overflow-hidden">
@@ -118,7 +192,8 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose">
+          <!-- open modal choose register -->
+          <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose_register">
             <i class="fa-solid fa-angle-left me-2"></i>back
           </h5>
           <form action="">
@@ -168,7 +243,9 @@
             </div>
             <button class="btn btn-primary btn-lg w-100">sign in</button>
             <p class="my-3 text-center">
-              i have account <a class="text-capitalize" data-bs-toggle="modal" href="#login" role="button">login</a>
+              <!-- link open modal choose login -->
+              i have account <a class="text-capitalize" data-bs-toggle="modal" href="#choose_login"
+                role="button">login</a>
             </p>
           </form>
         </div>
@@ -177,6 +254,7 @@
     </div>
   </div>
 
+  <!-- modal  register patient -->
   <div class="modal fade" id="register_patient" tabindex="-1" aria-hidden="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content overflow-hidden">
@@ -187,7 +265,8 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose">
+          <!-- open modal choose register -->
+          <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose_register">
             <i class="fa-solid fa-angle-left me-2"></i>back
           </h5>
           <form action="">
@@ -225,12 +304,15 @@
               <label>password *</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="date" class="form-control" value="2018-07-23" min="1997-01-01" max="2030-12-31" placeholder="dd-mm-yyyy" >
+              <input type="date" class="form-control" value="2018-07-23" min="1997-01-01" max="2030-12-31"
+                placeholder="dd-mm-yyyy">
               <label for="floatingInput">Birth Date</label>
             </div>
             <button class="btn btn-primary btn-lg w-100">sign in</button>
             <p class="my-3 text-center">
-              i have account <a class="text-capitalize" data-bs-toggle="modal" href="#login" role="button">login</a>
+              <!-- link open modal choose login -->
+              i have account <a class="text-capitalize" data-bs-toggle="modal" href="#choose_login"
+                role="button">login</a>
             </p>
           </form>
         </div>
@@ -247,7 +329,7 @@
           <h1 class="h1 text-capitalize">the most valuable thing is your health</h1>
           <p class="text-2 ">It is our honor to offer you a health service and doctors at the highest level of
             experience and efficiency</p>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose"
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose_register"
             data-bs-whatever="@mdo">register now</button>
         </div>
       </div>
@@ -660,8 +742,8 @@
         <div class="col-md-4 mt-4">
           <img src="./img/logo.png" class="logo" alt="">
           <p class="mt-3">Duis aute irure dolor inasfa reprehenderit in voluptate velit esse cillum</p>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">login</button>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose">sign up</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose_login">login</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choose_register">sign up</button>
         </div>
         <div class="col-md-2 mt-4">
           <ul class="list-unstyled">
