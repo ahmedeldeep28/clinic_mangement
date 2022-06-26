@@ -183,7 +183,7 @@
 
   <!-- modal  register doctor -->
   <div class="modal fade" id="register_doctor" tabindex="-1" aria-hidden="false">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
       <div class="modal-content overflow-hidden">
         <div class="modal-header">
           <div class="modal-title">
@@ -193,61 +193,184 @@
         </div>
         <div class="modal-body">
           <!-- open modal choose register -->
-          <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose_register">
-            <i class="fa-solid fa-angle-left me-2"></i>back
-          </h5>
           <form action="">
-            <div class="upload_img rounded-circle  m-auto mb-4">
-              <input type="file" name="image" id="file_upload">
-              <span class="bg-light text-center py-4">
-                <i class="fa-solid fa-camera fs-1 text-wite"></i>
-                <p>add photo</p>
-              </span>
-            </div>
-            <div class="row">
-              <div class="col-md-6 pe-md-1 mb-3">
-                <div class="form-floating">
-                  <input type="text" class="form-control" placeholder="first name *">
-                  <label>first name *</label>
+
+            <!-- input Doctor info -->
+            <div id="input_docotr">
+              <div class="d-flex justify-content-between">
+                <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#choose_register">
+                  <i class="fa-solid fa-angle-left me-2"></i>back
+                </h5>
+                <h5 class="pointer btn_next">
+                  next <i class="fa-solid fa-angle-right me-2"></i>
+                </h5>
+              </div>
+              <h3 class="my-3 text-capitalize">Doctor info</h3>
+              <div class="upload_img rounded-circle  m-auto mb-4">
+                <input class="image-input" type="file" name="image">
+                <span class="add_photo bg-light text-center py-4">
+                  <i class="fa-solid fa-camera fs-1 text-wite"></i>
+                  <p>add photo</p>
+                </span>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="full name">
+                <label>full name *</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="specialty" list="specialty" placeholder="specialty">
+                <datalist id="specialty">
+                  <option value="text">specialty</option>
+                </datalist>
+                <label>specialty *</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="phone number">
+                <label>phone number *</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" placeholder="name@example.com">
+                <label>Email address *</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" placeholder="password">
+                <label>password *</label>
+              </div>
+              <div class="form-floating mb-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                  <label class="form-check-label" for="male">male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" id="famale" value="famale">
+                  <label class="form-check-label" for="famale">famale</label>
                 </div>
               </div>
-              <div class="col-md-6 ps-md-1 mb-3">
-                <div class="form-floating">
-                  <input type="text" class="form-control" placeholder="name@example.com">
-                  <label>last name *</label>
+              <button type="button" class="btn btn-primary btn-lg w-100 btn_next">next</button>
+
+            </div>
+
+            <!-- input clinic  info -->
+            <div class="d-none" id="input_clinic">
+              <h5 class="pointer" id="btn_back">
+                <i class="fa-solid fa-angle-left me-2"></i>back
+              </h5>
+              <h3 class="my-3 text-capitalize">clinic info</h3>
+              <div class="mb-3">
+                <label for="formFile" class="form-label">clinic photo</label>
+                <input class="form-control form-control-lg" type="file" id="formFile" multiple>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="Clinic address">
+                <label>Clinic address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" min="5" max="60" placeholder="meeting time">
+                <label>meeting time (minutes)</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="Detection price(eg)">
+                <label>Detection price(eg)</label>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="lat" id="lat" hidden>
+                <input type="text" name="long" id="long" hidden>
+                <button class="btn btn-light btn-lg w-100 mb-3" type="button" id="get_location_btn">get
+                  location
+                </button>
+              </div>
+
+              <h5 class="fs-5 text-capitalize">select day</h5>
+              <input type="checkbox" class="btn-check" id="saturday" autocomplete="off">
+              <label class="btn btn-outline-success mb-2" for="saturday">saturday</label>
+
+              <input type="checkbox" class="btn-check" id="sunday" autocomplete="off">
+              <label class="btn btn-outline-success mb-2" for="sunday">sunday</label>
+
+              <input type="checkbox" class="btn-check" id="monday" autocomplete="off">
+              <label class="btn btn-outline-success mb-2" for="monday">monday</label>
+
+              <input type="checkbox" class="btn-check" id="tuesday" autocomplete="off">
+              <label class="btn btn-outline-success mb-2" for="tuesday">tuesday</label>
+
+              <input type="checkbox" class="btn-check" id="wednesday" autocomplete="off">
+              <label class="btn btn-outline-success mb-2" for="wednesday">wednesday</label>
+
+              <input type="checkbox" class="btn-check" id="thursday" autocomplete="off">
+              <label class="btn btn-outline-success mb-2" for="thursday">thursday</label>
+
+              <input type="checkbox" class="btn-check" id="friday" autocomplete="off">
+              <label class="btn btn-outline-success mb-2" for="friday">friday</label>
+
+              <div class="saturday d-none mt-3">
+                <label class="form-label mb-1 fw-500 fs-6">saturday</label>
+                <div class="input-group">
+                  <input type="time" class="form-control">
+                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
+                  <input type="time" class="form-control">
                 </div>
               </div>
+              <div class="sunday d-none mt-3">
+                <label class="form-label mb-1 fw-500 fs-6">sunday</label>
+                <div class="input-group">
+                  <input type="time" class="form-control">
+                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
+                  <input type="time" class="form-control">
+                </div>
+              </div>
+              <div class="monday d-none mt-3">
+                <label class="form-label mb-1 fw-500 fs-6">monday</label>
+                <div class="input-group">
+                  <input type="time" class="form-control">
+                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
+                  <input type="time" class="form-control">
+                </div>
+              </div>
+              <div class="tuesday d-none mt-3">
+                <label class="form-label mb-1 fw-500 fs-6">tuesday</label>
+                <div class="input-group">
+                  <input type="time" class="form-control">
+                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
+                  <input type="time" class="form-control">
+                </div>
+              </div>
+              <div class="wednesday d-none mt-3">
+                <label class="form-label mb-1 fw-500 fs-6">wednesday</label>
+                <div class="input-group">
+                  <input type="time" class="form-control">
+                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
+                  <input type="time" class="form-control">
+                </div>
+              </div>
+              <div class="thursday d-none mt-3">
+                <label class="form-label mb-1 fw-500 fs-6">thursday</label>
+                <div class="input-group">
+                  <input type="time" class="form-control">
+                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
+                  <input type="time" class="form-control">
+                </div>
+              </div>
+              <div class="friday d-none mt-3">
+                <label class="form-label mb-1 fw-500 fs-6">friday</label>
+                <div class="input-group">
+                  <input type="time" class="form-control">
+                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
+                  <input type="time" class="form-control">
+                </div>
+              </div>
+
+              <div class="footer_form mt-3">
+                <button class="btn btn-primary btn-lg w-100">sign in</button>
+                <p class="my-3 text-center">
+                  <!-- link open modal choose login -->
+                  i have account <a class="text-capitalize" data-bs-toggle="modal" href="#choose_login"
+                    role="button">login</a>
+                </p>
+              </div>
             </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" name="specialty" list="specialty" placeholder="specialty">
-              <datalist id="specialty">
-                <option value="text">specialty</option>
-              </datalist>
-              <label>specialty *</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" placeholder="phone number">
-              <label>phone number *</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" placeholder="name@example.com">
-              <label>Email address *</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="password" class="form-control" placeholder="password">
-              <label>password *</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="date" class="form-control" placeholder="enter mobile number">
-              <label for="floatingInput">Birth Date</label>
-            </div>
-            <button class="btn btn-primary btn-lg w-100">sign in</button>
-            <p class="my-3 text-center">
-              <!-- link open modal choose login -->
-              i have account <a class="text-capitalize" data-bs-toggle="modal" href="#choose_login"
-                role="button">login</a>
-            </p>
+
           </form>
+
         </div>
 
       </div>
@@ -271,25 +394,15 @@
           </h5>
           <form action="">
             <div class="upload_img rounded-circle  m-auto mb-4">
-              <input type="file" name="file" id="file_upload">
-              <span class="bg-light text-center py-4">
+              <input class="image-input" type="file" name="image">
+              <span class="add_photo bg-light text-center py-4">
                 <i class="fa-solid fa-camera fs-1 text-wite"></i>
                 <p>add photo</p>
               </span>
             </div>
-            <div class="row py-3">
-              <div class="col-md-6 pe-md-1 ">
-                <div class="form-floating">
-                  <input type="text" class="form-control" placeholder="first name">
-                  <label>first name *</label>
-                </div>
-              </div>
-              <div class="col-md-6 ps-md-1">
-                <div class="form-floating">
-                  <input type="text" class="form-control" placeholder="last name">
-                  <label>last name *</label>
-                </div>
-              </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" placeholder="full name">
+              <label>full name*</label>
             </div>
             <div class="form-floating mb-3">
               <input type="text" class="form-control" placeholder="phone number">
@@ -304,8 +417,7 @@
               <label>password *</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="date" class="form-control" value="2018-07-23" min="1997-01-01" max="2030-12-31"
-                placeholder="dd-mm-yyyy">
+              <input type="date" class="form-control" placeholder="enter mobile number">
               <label for="floatingInput">Birth Date</label>
             </div>
             <button class="btn btn-primary btn-lg w-100">sign in</button>
@@ -423,7 +535,6 @@
     </div>
   </section>
 
-
   <section class="sercives_patient py-5">
     <div class="container">
       <div class="row">
@@ -439,20 +550,7 @@
             Appointment</button>
         </div>
       </div>
-      <div class="row mt-4">
-        <div class="col-md-6 p-3 order-1 order-md-0 wow animate__fadeInLeft" data-wow-duration=".8s"
-          data-wow-offset="200">
-          <p class="fs-5 text-primary my-1">video call</p>
-          <h4 class="h4 text-capitalize">Communicate with your doctor from home</h4>
-          <p class="text-2 fw-light">Our specialists will be glad to provide you with their expertise - book an
-            appointment now with our doctors for diagnoses & treatment recommendation </p>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_patient">Make an
-            Appointment</button>
-        </div>
-        <div class="col-md-6 img wow animate__fadeInRight" data-wow-duration=".8s" data-wow-offset="200">
-          <img src="./img/video-doctor.jpeg" alt="">
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -605,19 +703,6 @@
         <div class="col-md-7 text-center wow animate__bounceIn" data-wow-duration=".8s" data-wow-offset="200">
           <span class="text-primary fs-5">Services for the doctors</span>
           <h2 class="fs-1 text-capitalize">We make your work easier and more accurate</h2>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-6 img wow animate__fadeInLeft" data-wow-duration="1s" data-wow-offset="200">
-          <img src="./img/video-doctor.jpeg" alt="">
-        </div>
-        <div class="col-md-6 p-3 wow animate__fadeInRight" data-wow-duration="1s" data-wow-offset="200">
-          <p class="fs-5 text-primary my-1">video call</p>
-          <h4 class="h4 text-capitalize">Apply now in video call with your patient </h4>
-          <p class="text-2 fw-light">If a patient needs a consultation or inquiry, now you can follow up on your patient
-            through this service</p>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_doctor"
-            data-bs-whatever="@mdo">Apply now</button>
         </div>
       </div>
       <div class="row mt-5">

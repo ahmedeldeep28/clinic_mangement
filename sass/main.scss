@@ -34,8 +34,12 @@ img {
   object-fit: cover;
   object-position: center;
 }
-.vh-50{height: 50vh;}
-.vh-75{height: 75vh;}
+.vh-50 {
+  height: 50vh;
+}
+.vh-75 {
+  height: 75vh;
+}
 a {
   text-decoration: none !important;
 }
@@ -253,6 +257,8 @@ h6 {
   height: 120px;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
   &.add_clinic {
     width: 180px;
     height: 180px;
@@ -326,7 +332,6 @@ h6 {
 .accordion-button:not(.collapsed) {
   background-color: $wihte;
 }
-
 .time {
   .swiper-slide {
     min-height: 150px;
@@ -339,15 +344,14 @@ h6 {
       font-size: 14px;
     }
     &.disabled .date_head {
-      background-color: #009dff!important;
-      opacity: .65;
+      background-color: #009dff !important;
+      opacity: 0.65;
     }
     &.disabled .btn-danger {
       background-color: #dc3545 !important;
       pointer-events: none;
-      opacity: .65;
+      opacity: 0.65;
     }
-    
   }
   .swiper-button-next:after,
   .swiper-button-prev:after {
@@ -413,7 +417,7 @@ h6 {
 
 .stars input {
   position: absolute;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
 }
 .stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
 .stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
@@ -426,18 +430,46 @@ h6 {
   height: 100px;
   resize: none;
 }
-#saturday:checked ~ .saturday {display: block !important;}
-#sunday:checked ~ .sunday {display: block !important;}
-#monday:checked ~ .monday {display: block !important;}
-#tuesday:checked ~ .tuesday {display: block !important;}
-#wednesday:checked ~ .wednesday {display: block !important;}
-#thursday:checked ~ .thursday {display: block !important;}
-#friday:checked ~ .friday {display: block !important;}
+#saturday:checked ~ .saturday {
+  display: block !important;
+}
+#sunday:checked ~ .sunday {
+  display: block !important;
+}
+#monday:checked ~ .monday {
+  display: block !important;
+}
+#tuesday:checked ~ .tuesday {
+  display: block !important;
+}
+#wednesday:checked ~ .wednesday {
+  display: block !important;
+}
+#thursday:checked ~ .thursday {
+  display: block !important;
+}
+#friday:checked ~ .friday {
+  display: block !important;
+}
 
-#vd_saturday:checked ~ .saturday {display: block !important;}
-#vd_sunday:checked ~ .sunday {display: block !important;}
-#vd_monday:checked ~ .monday {display: block !important;}
-#vd_tuesday:checked ~ .tuesday {display: block !important;}
-#vd_wednesday:checked ~ .wednesday {display: block !important;}
-#vd_thursday:checked ~ .thursday {display: block !important;}
-#vd_friday:checked ~ .friday {display: block !important;}
+#vd_saturday:checked ~ .saturday {
+  display: block !important;
+}
+#vd_sunday:checked ~ .sunday {
+  display: block !important;
+}
+#vd_monday:checked ~ .monday {
+  display: block !important;
+}
+#vd_tuesday:checked ~ .tuesday {
+  display: block !important;
+}
+#vd_wednesday:checked ~ .wednesday {
+  display: block !important;
+}
+#vd_thursday:checked ~ .thursday {
+  display: block !important;
+}
+#vd_friday:checked ~ .friday {
+  display: block !important;
+}

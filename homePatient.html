@@ -52,99 +52,59 @@
     <header class="header_patient position-relative">
         <img src="./img/doctor-cover.webp" class="img-cover" alt="">
         <div class="container px-2 px-sm-0  position-absolute top-100 start-50 translate-middle">
-            <div class="card rounded-3 p-4 shadow-sm">
-                <ul class="nav nav-tabs flex-nowrap" id="myTab" role="tablist">
-                    <li class="nav-item w-50 text-center" role="presentation">
-                        <h5 class="text-capitalize fs-4 nav-link active py-3" id="booking-tab" data-bs-toggle="tab"
-                            data-bs-target="#booking" type="button" role="tab" aria-controls="booking"
-                            aria-selected="true">
-                            book a doctor
-                        </h5>
-                    </li>
-                    <li class="nav-item w-50 text-center" role="presentation">
-                        <h5 class="text-capitalize fs-4 nav-link py-3" id="call-tab" data-bs-toggle="tab"
-                            data-bs-target="#call" type="button" role="tab" aria-controls="call" aria-selected="false">
-                            call doctor
-                        </h5>
-                    </li>
-                </ul>
-                <div class="tab-content mt-3">
-
-                    <!-- form book a doctor -->
-                    <div class="tab-pane active" id="booking" role="tabpanel" aria-labelledby="booking-tab">
-                        <form action="" class="row gx-1 gy-2 mb-3">
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="form-floating">
-                                    <select class="form-select" id="floatingSelect">
-                                        <option selected>Open select</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                    <label for="floatingInput">specialty </label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="form-floating">
-                                    <input class="form-control" list="city" placeholder="area">
-                                    <datalist id="area">
-                                        <option value="San Francisco">
-                                        <option value="New York">
-                                        <option value="Seattle">
-                                        <option value="Los Angeles">
-                                        <option value="Chicago">
-                                    </datalist>
-                                    <label for="floatingInput">choose area</label>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="form-floating">
-                                    <input class="form-control" list="city" placeholder="city">
-                                    <datalist id="city">
-                                        <option value="San Francisco">
-                                        <option value="New York">
-                                        <option value="Seattle">
-                                        <option value="Los Angeles">
-                                        <option value="Chicago">
-                                    </datalist>
-                                    <label for="floatingInput">choose city</label>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="doctor name">
-                                    <label>doctor name</label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-2">
-                                <button class="btn btn-primary btn-lg w-100 h-100">search</button>
-                            </div>
-                        </form>
+            <div class="card shadow-sm p-4 rounded-5">
+                <h4 class="fs-3 mb-3 text-capitalize">search a doctor</h4>
+                <form action="" class="row gx-1 gy-2 pb-1">
+                  <div class="col-12 col-sm-6 col-md">
+                    <div class="form-floating">
+                      <select class="form-select" id="floatingSelect">
+                        <option selected>Open select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="floatingInput">specialty </label>
                     </div>
-
-                    <!-- form call a doctor -->
-                    <div class="tab-pane" id="call" role="tabpanel" aria-labelledby="call-tab">
-                        <form action="" class="row gx-1 gy-2 mb-3">
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="form-floating">
-                                    <select class="form-select" id="floatingSelect">
-                                        <option selected>Open select</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                    <label for="floatingInput">specialty </label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-2">
-                                <button class="btn btn-primary btn-lg w-100 h-100">search</button>
-                            </div>
-                        </form>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md">
+                    <div class="form-floating">
+                      <input class="form-control" list="city" placeholder="area">
+                      <datalist id="area">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                      </datalist>
+                      <label for="floatingInput">choose area</label>
                     </div>
-                </div>
-            </div>
+                  </div>
+        
+                  <div class="col-12 col-sm-6 col-md">
+                    <div class="form-floating">
+                      <input class="form-control" list="city" placeholder="city">
+                      <datalist id="city">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                      </datalist>
+                      <label for="floatingInput">choose city</label>
+                    </div>
+                  </div>
+        
+                  <div class="col-12 col-sm-6 col-md">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" placeholder="doctor name">
+                      <label>doctor name</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-2">
+                    <button class="btn btn-primary btn-lg w-100 h-100">search</button>
+                  </div>
+                </form>
+              </div>
         </div>
     </header>
 
