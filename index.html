@@ -257,7 +257,11 @@
               </h5>
               <h3 class="my-3 text-capitalize">clinic info</h3>
               <div class="mb-3">
-                <label for="formFile" class="form-label">clinic photo</label>
+                <label for="formFile" class="form-label fw-bold">clinic photo (select 3 photo)</label>
+                <input class="form-control form-control-lg" type="file" id="formFile" multiple>
+              </div>
+              <div class="mb-3">
+                <label for="formFile" class="form-label fw-bold">bill photo (select 2 photo)</label>
                 <input class="form-control form-control-lg" type="file" id="formFile" multiple>
               </div>
               <div class="form-floating mb-3">
@@ -278,85 +282,6 @@
                 <button class="btn btn-light btn-lg w-100 mb-3" type="button" id="get_location_btn">get
                   location
                 </button>
-              </div>
-
-              <h5 class="fs-5 text-capitalize">select day</h5>
-              <input type="checkbox" class="btn-check" id="saturday" autocomplete="off">
-              <label class="btn btn-outline-success mb-2" for="saturday">saturday</label>
-
-              <input type="checkbox" class="btn-check" id="sunday" autocomplete="off">
-              <label class="btn btn-outline-success mb-2" for="sunday">sunday</label>
-
-              <input type="checkbox" class="btn-check" id="monday" autocomplete="off">
-              <label class="btn btn-outline-success mb-2" for="monday">monday</label>
-
-              <input type="checkbox" class="btn-check" id="tuesday" autocomplete="off">
-              <label class="btn btn-outline-success mb-2" for="tuesday">tuesday</label>
-
-              <input type="checkbox" class="btn-check" id="wednesday" autocomplete="off">
-              <label class="btn btn-outline-success mb-2" for="wednesday">wednesday</label>
-
-              <input type="checkbox" class="btn-check" id="thursday" autocomplete="off">
-              <label class="btn btn-outline-success mb-2" for="thursday">thursday</label>
-
-              <input type="checkbox" class="btn-check" id="friday" autocomplete="off">
-              <label class="btn btn-outline-success mb-2" for="friday">friday</label>
-
-              <div class="saturday d-none mt-3">
-                <label class="form-label mb-1 fw-500 fs-6">saturday</label>
-                <div class="input-group">
-                  <input type="time" class="form-control">
-                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
-                  <input type="time" class="form-control">
-                </div>
-              </div>
-              <div class="sunday d-none mt-3">
-                <label class="form-label mb-1 fw-500 fs-6">sunday</label>
-                <div class="input-group">
-                  <input type="time" class="form-control">
-                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
-                  <input type="time" class="form-control">
-                </div>
-              </div>
-              <div class="monday d-none mt-3">
-                <label class="form-label mb-1 fw-500 fs-6">monday</label>
-                <div class="input-group">
-                  <input type="time" class="form-control">
-                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
-                  <input type="time" class="form-control">
-                </div>
-              </div>
-              <div class="tuesday d-none mt-3">
-                <label class="form-label mb-1 fw-500 fs-6">tuesday</label>
-                <div class="input-group">
-                  <input type="time" class="form-control">
-                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
-                  <input type="time" class="form-control">
-                </div>
-              </div>
-              <div class="wednesday d-none mt-3">
-                <label class="form-label mb-1 fw-500 fs-6">wednesday</label>
-                <div class="input-group">
-                  <input type="time" class="form-control">
-                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
-                  <input type="time" class="form-control">
-                </div>
-              </div>
-              <div class="thursday d-none mt-3">
-                <label class="form-label mb-1 fw-500 fs-6">thursday</label>
-                <div class="input-group">
-                  <input type="time" class="form-control">
-                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
-                  <input type="time" class="form-control">
-                </div>
-              </div>
-              <div class="friday d-none mt-3">
-                <label class="form-label mb-1 fw-500 fs-6">friday</label>
-                <div class="input-group">
-                  <input type="time" class="form-control">
-                  <span class="input-group-text bg-transparent border-0 fw-bold">to</span>
-                  <input type="time" class="form-control">
-                </div>
               </div>
 
               <div class="footer_form mt-3">
@@ -706,8 +631,7 @@
         </div>
       </div>
       <div class="row mt-5">
-        <div class="col-md-6 p-3 order-1 order-md-0 wow animate__fadeInLeft" data-wow-duration="1s"
-          data-wow-offset="200">
+        <div class="col-md-6 p-3   wow animate__fadeInLeft" data-wow-duration="1s" data-wow-offset="200">
           <p class="fs-5 text-primary my-1">Add clinic </p>
           <h2 class="h4 text-capitalize">Put your clinic now on the platform </h2>
           <p class="text-2 fw-light">We will help you and publish your clinic. All you have to do is apply to the
